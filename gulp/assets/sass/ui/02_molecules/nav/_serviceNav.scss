@@ -1,0 +1,67 @@
+// - SERVICE NAV
+
+	//=============================================================================================
+	// - THE STYLING
+
+	.serviceNav {
+		padding: gap(xsmall) 0;
+		border-top: .2rem solid color(brand-dark); border-bottom: .2rem solid color(brand-dark);
+
+		.buHeader & {
+			background-color: color(brand-dark);
+
+			// - small up
+			@include media(s) {
+				display: none;
+			}
+		}
+
+		[class*="_priorityPlus"] & {
+			display: none;
+		}
+
+		[class*="_priorityPlus__hiddens"] & {
+			display: block; width: 100%; float: left;
+
+			// - medium up
+			@include media(m) {
+				display: none;
+			}
+		}
+
+		// - medium up
+		@include media(m) {
+			height: 100%; padding: 0; float: left;
+			border: 0;
+		}
+	}
+
+	.serviceNav__list {
+		@include pie-clearfix;
+
+		.buHeader & {
+			padding: 0 gap(xsmall);
+		}
+
+	}
+
+	.serviceNav__item {
+		display: block; padding: 0 gap(xsmall);
+
+		// - medium up
+		@include media(m) {
+			padding-right: gap(small); float: left;
+
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+
+	.serviceNav__link {
+		font-family: font(special-2); font-size: 1.2rem; color: color(brand-dark); text-decoration: none;
+
+		.buHeader & {
+			font-size: 1.6rem; color: color(light);
+		}
+	}

@@ -1,0 +1,32 @@
+// - AUDIENCE NAV
+
+	//=============================================================================================
+	// - THE STYLING
+
+	.audienceNav {
+		@include pie-clearfix;
+		padding: gap(xsmall);
+
+		// - medium up
+		@include media(m) {
+			padding: gap(xsmall) 0;
+		}
+	}
+
+	.audienceNav__item {
+		display: block; padding-right: gap(small); float: left;
+		line-height: 1;
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	.audienceNav__link {
+		font-family: font(special-2); font-size: 1.2rem; color: color(brand-dark); text-decoration: none; text-transform: uppercase;
+
+		&[class*="-active"] {
+			font-family: font(special-1);
+		}
+	}
+

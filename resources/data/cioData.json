@@ -1,0 +1,34 @@
+{
+	"cioData":[
+		{
+			"visual" : "/resources/img/visuals/vab-visual-portugal.jpg",
+			"title" : "72u in Portugal",
+			"content": "Centro de Portugal – ruwweg de strook tussen Porto en Lissabon – is gul met zee, bergen en geschiedenis. 72u in het hart van het land."
+		},
+		{
+			"visual" : "/resources/img/visuals/vab-visual-showroom.jpg",
+			"title" : "Test je wijnkennis",
+			"content": "Iedereen drinkt weleens graag een glaasje, maar hoe goed is jouw basiskennis over wijn en andere dranken? Doe de test!"
+		},
+		{
+			"visual" : "/resources/img/visuals/vab-visual-wijnkennis.jpg",
+			"title" : "Nu in de showroom: de Moto Guzzi V7 Scrambler, ...",
+			"content": "Onze redacteurs testen deze maand de Moto Guzzi V7 Scrambler, de Peugeot 208 en de gloednieuwe Renault"
+		},
+		{
+			"visual" : "/resources/img/visuals/vab-visual-wegenwachters.jpg",
+			"title" : "Wegenwachters",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada ex a lacus varius, non laoreet lacus fringilla."
+		},
+		{
+			"visual" : "/resources/img/visuals/vab-visual-bikeOfTheYear.jpg",
+			"title" : "Bike of the Year",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada ex a lacus varius, non laoreet lacus fringilla."
+		},
+		{
+			"visual" : "/resources/img/visuals/vab-visual-dieselrijden.jpg",
+			"title" : "Dieselrijden wordt een pak duurder",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada ex a lacus varius, non laoreet lacus fringilla."
+		}
+	]
+}

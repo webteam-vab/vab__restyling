@@ -1,0 +1,20 @@
+// - ERRORS
+
+	.errorTarget {
+		position: relative; z-index: 1;
+	}
+
+	.errorMessage {
+		position: absolute; top: 100%; left: 0; z-index: 1;
+		display: none; width: 100%; margin-top: .5rem;
+		color: color(negative); font-size: 1rem; line-height: 1;
+
+		.errorTarget.error & {
+			display: block;
+		}
+
+		[class*="-checkbox"] &,
+		[class*="-radio"] & {
+			position: relative; top: 0;
+		}
+	}

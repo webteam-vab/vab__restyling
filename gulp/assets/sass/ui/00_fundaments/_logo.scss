@@ -1,0 +1,61 @@
+// - FUNDAMENTS - LOGO
+
+	.logo,
+	[class*="logo-"],
+	[class^="logo-"] {
+		display: block; width: 100%; height: 0; padding-top: 51.38%;
+		background: transparent url('../svg/vab-logo.svg') no-repeat center / contain;
+		backface-visibility: hidden;
+
+		&[class*="--slogan"] {
+			background-image: url('../svg/vab-logo-slogan.svg');
+		}
+
+		&[class*="--slogan-descriptor"] {
+			background-image: url('../svg/vab-logo-slogan-descriptor.svg');
+		}
+
+		&[class*="--business-bijstand"] {
+			background-image: url('../svg/vab-logo-bijstand.svg');
+		}
+
+		&[class*="--business-banden"] {
+			background-image: url('../svg/vab-logo-banden.svg');
+		}
+
+		&[class*="--business-banden--white"] {
+			background-image: url('../svg/vab-logo-banden--white.svg');
+		}
+
+		&[class*="--business-tweedehands"] {
+			background-image: url('../svg/vab-logo-tweedehands.svg');
+		}
+
+		&[class*="--business-rijschool"] {
+			background-image: url('../svg/vab-logo-rijschool.svg');
+		}
+
+		&[class*="--business-rijschool--white"] {
+			background-image: url('../svg/vab-logo-rijschool--white.svg');
+		}
+
+		&[class*="--business-diagnose"] {
+			background-image: url('../svg/vab-logo-diagnose.svg');
+		}
+
+		&[class*="--business-fleetservice"] {
+			background-image: url('../svg/vab-logo-fleetservice.svg');
+		}
+
+		&[class*="--business-telematics"] {
+			background-image: url('../svg/vab-logo-telematics.svg');
+		}
+
+		&[class*="--business-trainingconsult"] {
+			background-image: url('../svg/vab-logo-trainingconsult.svg');
+		}
+
+		&[class*="--business-media"] {
+			background-image: url('../svg/vab-logo-media.svg');
+		}
+	}

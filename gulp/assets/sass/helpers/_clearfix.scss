@@ -1,0 +1,16 @@
+// - CLEARFIX
+
+	@mixin clearfix() {
+		overflow: hidden;
+	}
+
+	@mixin pie-clearfix() {
+		&:after {
+		    clear: both; display: table;
+		    content: ' ';
+		}
+	}
+
+	.cf {
+		@include clearfix;
+	}

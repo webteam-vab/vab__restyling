@@ -1,0 +1,63 @@
+// - ICON TWEAKS
+
+	//=============================================================================================
+	// - THE STYLING
+
+	[class*="icon-"] {
+
+		// - fix for icon line height
+		&:before {
+			transform: translateY(6%);
+		}
+	}
+
+	//=============================================================================================
+	// - ICON SPACER FUNCTION
+
+	[class*="icon__space-"] {
+
+		@each $bpName, $bpValue, $bp in $breakpoints {
+
+			@each $fs, $fontSize in $fontSizes {
+
+				// - generate space for icon
+				&[class*="-#{$bpName}-fs#{$fs}"] {
+
+					@if $bpName == 'xs' {
+
+						// - styles for parent
+						position: relative;
+						padding-left: $fontSize + .5rem;
+
+						// - generate style for icon itself
+						& > [class*="icon-"] {
+							position: absolute; top: 0; left: 0;
+							transform: translateY(-12.5%);
+							font-size: $fontSize;
+						}
+
+					} @else {
+
+						@include media($bpValue) {
+
+							position: relative;
+							padding-left: $fontSize + .5rem;
+
+							// - generate style for icon itself
+							& > [class*="icon-"] {
+								position: absolute; top: 0; left: 0;
+								font-size: $fontSize;transform: translateY(-12.5%);
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+

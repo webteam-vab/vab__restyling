@@ -1,0 +1,31 @@
+// - PRODUCT OPTIONS
+
+//=============================================================================================
+// - THE STYLES
+.product-options {
+
+}
+.product-options-list {
+  //background: red;
+  border-top: .2rem solid color(theme-1-light);
+
+  .product-options-list-item {
+
+  }
+
+  .product-options-list-trigger {
+    border-bottom: .2rem solid color(theme-1-light);
+    display: block;
+    text-decoration: none;
+    position: relative;
+
+    &:after {
+      right: 2rem;
+    }
+  }
+
+  .product-options-list-content {
+    background: lighten(color(theme-1-light), 20);
+    border-bottom: .4rem solid color(theme-1-light);
+  }
+}

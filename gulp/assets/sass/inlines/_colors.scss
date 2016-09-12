@@ -1,0 +1,13 @@
+// - INLINES - COLORS
+
+	// loop through the colors list (see ui/fundaments)
+	// and print the font color and background-color for each
+	@each $colorName, $colorValue, $color in $colors {
+
+		.fc--#{$colorName} 			{ color: $colorValue; }
+		.fc--#{$colorName}-tone 	{ color: rgba($colorValue, .5); }
+
+		.bgc--#{$colorName} 		{ background-color: $colorValue; }
+		.bgc--#{$colorName}-tone 	{ background-color: rgba($colorValue, .5); }
+
+	}

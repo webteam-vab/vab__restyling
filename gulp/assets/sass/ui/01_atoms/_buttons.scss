@@ -1,0 +1,232 @@
+// - BUTTONS
+
+	//=============================================================================================
+	// - THE VARIABLES
+
+	$btnHeight--small:	     3rem;
+	$btnHeight--medium:    3.6rem;
+	$btnHeight--large:	   4.5rem;
+
+	$btnBorder: 			.2rem;
+
+	//=============================================================================================
+	// - THE BUTTON RESET
+
+	[role="button"],
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button {
+		display: inline-block; margin: 0; padding: 0; overflow: visible;
+		color: inherit; font: inherit; text-align: center; text-decoration: none; line-height: inherit;
+		border: 0;
+		background: none;
+		cursor: pointer;
+		white-space: pre;
+		appearance: button;
+		user-select: none;
+
+		[class*="-lower"] & {
+			//min-width: 16rem !important;
+		}
+	}
+
+	input::-moz-focus-inner,
+	button::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+
+	//=============================================================================================
+	// - THE STYLES
+
+	.button,
+	[class*="button--"] {
+		transition: color 250ms, background-color 250ms, border-color 250ms;
+		position: relative; z-index: 1;
+		display: inline-block; /* min-width: 4.5rem; */ height: 4.5rem; overflow: hidden;
+		font-family: font(special-1); color: color(brand-dark); font-size: 1.8rem; line-height: 1.1; text-decoration: none;
+		border: .2rem solid color(action);
+		background-color: color(action);
+		cursor: pointer;
+
+		// - hover state
+		&:hover,
+		&[active] {
+			background-color: color(action, light, 13);
+			border-color: color(action, light, 13);
+		}
+
+		// - disabled state
+		&[disabled],
+		&[disabled="true"],
+		&[disabled="disabled"] {
+			border-color: color(neutrals-1) !important;
+			background-color: color(neutrals-1);
+			cursor: default !important;
+		}
+
+		// - lower priority buttons
+		&[class*="-lower"] {
+			height: 3.6rem;
+			font-size: 1.4rem; color: color(brand-dark);
+		}
+
+		/* [class*="-inverted"] & {
+			color: color(action) !important;
+			border-color: #fff;
+			background-color: #fff;
+
+			&:hover,
+			&[active] {
+				// hover and active states
+			}
+		} */
+
+		&[class*="-inverted"] {
+			background-color: color(primair-2);
+			border-color: color(primair-2);
+			color: color(light) !important;
+
+			&:hover,
+			&[active] {
+				background-color: color(primair-2-light);
+				border-color: color(primair-2-light);
+			}
+		}
+
+		// - ghost button
+		&[class*="-ghost"] {
+			color: color(brand-dark) !important;
+			border-color: color(brand-dark);
+			background-color: transparent;
+
+			&:hover,
+			&[active] {
+				color: #fff !important;
+				background-color: color(brand-dark);
+			}
+
+			[class*="-inverted"] &,
+			&[class*="-inverted"] {
+				color: #fff !important;
+				border-color: #fff;
+
+				&:hover,
+				&[active] {
+					color: color(brand-dark) !important;
+					border-color: #fff;
+					background-color: #fff;
+				}
+			}
+
+			&[disabled],
+			&[disabled="true"],
+			&[disabled="disabled"] {
+				color: color(neutrals-1) !important;
+				background-color: transparent;
+			}
+		}
+
+		// - other buttons
+		&[class*="-other"] {
+			background-color: color(brand-dark);
+			border-color: color(brand-dark);
+			color: color(light);
+		}
+
+		// - with icon
+		&[class*="-icon-right"] {
+			padding-right: 2rem;
+		}
+
+		&[class*="-icon-left"] {
+			padding-left: 2rem;
+		}
+	}
+
+	.button__label {
+		transition: transform 200ms;
+		@include valign;
+		display: block; /* min-width: 18rem; */ margin-top: .1rem; padding: 0 1.5rem;
+		color: inherit !important; font-family: font(special-1); text-align: center;
+
+		[class*="-lower"] & {
+			//min-width: 16rem;
+		}
+
+		button & {
+			@include valign-reset;
+			display: inline;
+		}
+	}
+
+	.button__label__callout {
+		color: color(action);
+	}
+
+	[class*="button__icon"] {
+		transition: margin-right 200ms;
+		@include valign;
+		position: absolute;
+		display: block;
+
+		&[class*="-inline"] {
+			@include valign-reset;
+			margin: 0 .8rem;
+		}
+
+		&[class*="icon"][class$="-right"] {
+			.button:hover &,
+			[class*="button--"]:hover & {
+				margin-right: -.2rem;
+			}
+
+			font-size: 80%;
+		}
+
+		&[class*="button__icon"] {
+			[class*="-icon-left"] & {
+				left: 1rem;
+			}
+
+			[class*="-icon-right"] & {
+				right: 1rem;
+			}
+		}
+
+		button & {
+			display: inline;
+		}
+	}
+
+
+// - DIRECTIONAL BUTTON-ISH
+
+	//=============================================================================================
+	// - THE VARIABLES
+
+	$dir-size: 3rem;
+	$dir-brdr: .3rem;
+
+	//=============================================================================================
+	// - THE STYLES
+
+	.directionalButton,
+	[class*="directionalButton"] {
+		transition: color 250ms, background-color 250ms, border-color 250ms;
+		display: block; width: $dir-size; height: $dir-size;
+		font-size: 1.6rem; line-height: 1.6; text-decoration: none; text-align: center;
+		border: .3rem solid color(brand-dark);
+		cursor: pointer;
+
+		[class*="-inverted"] & {
+			border-color: #fff;
+		}
+
+		& > [class*="icon"]:before {
+			transform: translateY(0);
+		}
+	}
+
+

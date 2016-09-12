@@ -1,0 +1,64 @@
+// - VISUALS
+
+	//=============================================================================================
+	// - THE STYLES
+
+	.hero {
+		position: relative; z-index: 1;
+		height: 100%;
+	}
+
+	.hero__inner {
+		position: absolute; left: 0; right: 0; bottom: 0;
+		width: 100%; max-width: section(xsmall);
+	}
+
+	.hero__icon__wrap {
+		height: 6rem;
+
+		// - medium up
+		@include media(m) {
+			height: 8rem;
+		}
+	}
+
+	.hero__icon {
+		display: inline-block; padding: 1rem; float: left;
+		font-size: 4rem;
+
+		// - medium up
+		@include media(m) {
+			padding: 1.5rem;
+			font-size: 5rem;
+		}
+	}
+
+	.hero__icon__title {
+		@include valign;
+		padding-left: gap(small); float: left;
+	}
+
+	.hero__wrapper {
+		.hero__bg {
+			height: 0;
+			padding-top: 40%;
+		}
+
+		.hero__inner {
+			background: color(neutrals-0);
+			position: relative;
+
+			[class*="heading-"] {
+				color: color(primair-2);
+			}
+
+			@include media(s) {
+				background: transparent;
+				position: absolute;
+
+				[class*="heading-"] {
+					color: color(light);
+				}
+			}
+		}
+	}

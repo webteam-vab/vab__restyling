@@ -1,0 +1,93 @@
+// - CONTENT ITEMS OVERVIEW
+
+	//=============================================================================================
+	// - THE STYLES
+
+	.contentItemsOverview__header__icon {
+		display: block; margin-bottom: gap(xxsmall);
+
+		// - small up
+		@include media(s) {
+			display: inline-block; margin: 0;
+		}
+	}
+
+	.contentItemsOverview__wrap,
+	[class*="contentItemsOverview__wrap"] {
+		position: relative; z-index: 1;
+		display: block; height: 32rem;
+		border: .3rem solid color(neutrals-0);
+		text-decoration: none;
+
+		&[class*="-adv"] {
+			border: .5rem solid color(brand-special);
+
+			&:hover {
+				border-color: color(primair-1-light);
+			}
+		}
+	}
+
+	.contentItemsOverview__advLabel {
+		position: absolute; top: -.2rem; right: -.2rem; z-index: 1;
+		display: block; width: 3rem; height: 3rem;
+		background-color: color(brand-special);
+		font-size: 1.2rem; text-align: center; line-height: 3rem;
+
+		[class*="-adv"]:hover & {
+			background-color: color(primair-1-light);
+		}
+	}
+
+	.contentItemsOverview__visual {
+		display: block; width: 100%; height: 14.5rem;
+
+		[class*="-adv"] & {
+			position: absolute; left: 0; bottom: 0; z-index: -1;
+		}
+	}
+
+	.contentItemsOverview__title {
+		display: block; width: 100%; max-height: 6.1rem; padding: gap(xxsmall) gap(small);
+		border-bottom: .3rem solid color(neutrals-0);
+
+		[class*="-adv"] & {
+			padding: gap(xsmall) ($dir-size + .5rem) 0 ($dir-size + .5rem); height: auto !important;
+			text-align: center;
+			border: none;
+
+			& > * {
+				font-size: 2.6rem;
+			}
+		}
+	}
+
+	.contentItemsOverview__theContent {
+		position: relative;
+		max-height: 8.6rem; padding: gap(small) ($dir-size + .5rem) 0 ($dir-size + .5rem);
+	}
+
+	.contentItemsOverview__dir {
+		position: absolute; bottom: -.2rem; right: -.2rem;
+		border-color: color(neutrals-0);
+		color: color(neutrals-0);
+
+		[class*="-adv"] & {
+			border-color: color(brand-special);
+			color: color(brand-special);
+		}
+
+		[class*="-adv"]:hover & {
+			border-color: color(primair-1-light);
+			color: color(primair-1-light);
+		}
+
+		.contentItemsOverview__wrap:hover & {
+			border-color: color(theme-4);
+			color: color(theme-4);
+		}
+	}
+
+	.contentItemsOverview__more {
+		font-size: 1.4rem; text-align: center;
+	}

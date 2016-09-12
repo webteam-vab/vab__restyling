@@ -1,0 +1,133 @@
+// - TYPO
+
+	//=============================================================================================
+	// - @FONT FACE
+
+	@font-face { font-family: 'Campton-SemiBold'; src: url('/resources/fonts/campton-semibold.eot'); src: url('/resources/fonts/campton-semibold.eot?#iefix') format('embedded-opentype'),url('/resources/fonts/campton-semibold.woff2') format('woff2'),url('/resources/fonts/campton-semibold.woff') format('woff'),url('/resources/fonts/campton-semibold.ttf') format('truetype');}
+	@font-face { font-family: 'Campton-Book';src: url('/resources/fonts/campton-book.eot');src: url('/resources/fonts/campton-book.eot?#iefix') format('embedded-opentype'),url('/resources/fonts/campton-book.woff2') format('woff2'),url('/resources/fonts/campton-book.woff') format('woff'),url('/resources/fonts/campton-book.ttf') format('truetype');}
+
+
+	//=============================================================================================
+	// - THE VARIABLES
+
+	@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+
+	$fonts: (
+		'main': 'PT Sans',
+		'special-1': 'Campton-Semibold',
+		'special-2': 'Campton-Book',
+	);
+
+	$fontSizeMods: (
+		'xxsmaller': 75%,
+		'xsmaller':  85%,
+		'smaller':   95%,
+		'larger':   105%,
+		'xlarger':  120%,
+		'xxlarger': 150%,
+	);
+
+	$fontSizes: (
+		'1': 4.6rem,
+		'2': 2.6rem,
+		'3': 2rem,
+		'4': 1.6rem,
+		'5': 1.4rem,
+		'6': 1.2rem,
+	);
+
+	//=============================================================================================
+	// - THE FUNCTIONS
+
+		// - generate font family
+		@function font($face: main) {
+			@return map-get($fonts, quote($face)), Helvetica, Arial, sans-serif;
+		}
+
+		// - generate rem font sizes
+		@each $fs, $fontSize in $fontSizes {
+
+			.fs--#{$fs} {
+				font-size: $fontSize !important;
+			}
+		}
+
+	//=============================================================================================
+	// - THE STYLES
+
+	::selection {
+		color: #fff;
+		background: color(brand-dark);
+	}
+
+	::-moz-selection {
+		color: #fff;
+		background: color(brand-dark);
+	}
+
+	body {
+		font-family: font(main); font-size: 1.5rem; color: color(brand-dark); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+	}
+
+	li,
+	p,
+	a {
+		color: inherit;
+
+		[class*='-inverted'] & {
+			color: #fff;
+		}
+	}
+
+	p {
+		margin: 0; max-width: 65rem;
+		line-height: 1.5;
+	}
+
+	strong,
+	b {
+		font-weight: bold;
+	}
+
+	small {
+		font-size: 1.2rem;
+	}
+
+	//=============================================================================================
+	// - RICH-TEXT-CONTENT
+
+	.richTextContent {
+		font-family: font(main); color: color(neutrals-3); font-size: 1.5rem;
+
+		h1 { @extend .heading--1 !optional; }
+		h2 { @extend .heading--2 !optional; }
+		h3 { @extend .heading--3 !optional; }
+		h4 { @extend .heading--4 !optional; }
+		h5 { @extend .heading--5 !optional; }
+		h6 { @extend .heading--6 !optional; }
+
+		img 		{ @extend .graphic !optional; }
+		figcaption 	{ @extend .graphic__caption !optional; }
+
+		ul { padding-left: 0; }
+		ol { padding-left: 0; }
+		// li { @extend .list__item !optional; }
+
+		p {
+			line-height: 1.69;
+		}
+
+		a {
+			@extend .link !optional;
+		}
+
+		b,
+		strong {
+			font-weight: bold;
+		}
+
+		i,
+		em {
+			font-style: italic;
+		}
+	}

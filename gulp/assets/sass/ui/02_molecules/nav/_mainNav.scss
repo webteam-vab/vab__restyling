@@ -1,0 +1,323 @@
+// - MAIN NAV
+
+	//=============================================================================================
+	// - THE VARIABLES
+
+	$items: ( 1, 2, 3, 4, 5, 6 );
+
+	$asideSize: 30%;
+
+
+	//=============================================================================================
+	// - FUNCTION TO CALUCATE THE SIZES
+
+	@each $item, $itemCount in $items {
+
+		// - medium up
+		@include media(m) {
+
+			[class*="_has_#{$item}_items"] {
+
+				// - calculate sizes for main sub nav
+				.mainNav__sub__main {
+					width: 100%;
+				}
+
+				.mainNav__sub__main__list {
+
+					$clear: none;
+					$itemWidth: (100% / 3);
+
+					@if ($item == 4) { $itemWidth: 50%; $clear: left; }
+
+					width: $itemWidth;
+
+					&:nth-child(odd) {
+						clear: $clear;
+					}
+
+					// - large up
+					@include media(l) {
+						width: (100% / $item);
+
+						&:nth-child(odd) {
+							clear: none;
+						}
+					}
+				}
+
+				// - calculate sizes for aside sub nav
+				&[class*="_has_aside"] {
+
+					// - styles for main sub nav item
+					.mainNav__sub__main {
+						width: 60%;
+
+						// - large up
+						@include media(l) {
+							width: 100% - (100% / $item);
+						}
+					}
+
+					.mainNav__sub__main__list {
+						width: 50%;
+
+						&:nth-child(odd) {
+							clear: none;
+						}
+
+						// - large up
+						@include media(l) {
+
+							//distract space from aside to calculate the resting space
+							$rest: $item - 1;
+
+							width: (100% / $rest);
+						}
+
+
+					}
+
+					// - styles for sub aside nav item
+					.mainNav__sub__aside {
+						width: 40%;
+
+						// - large up
+						@include media(l) {
+							width: (100% / $item);
+						}
+					}
+
+					.mainNav__sub__aside__list {
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+
+
+	//=============================================================================================
+	// - THE MAIN NAV
+
+	.mainNav {
+		display: block; height: 100%;
+
+		// - medium up
+		@include media(m) {
+			padding-left: gap(small);
+		}
+	}
+
+	.mainNav__list {
+		@include pie-clearfix;
+		display: block; height: 100%;
+
+		// - medium up
+		@include media(m) {
+			padding: 0;
+		}
+	}
+
+	.mainNav__item {
+		display: block; height: 100%;
+		border-bottom: 1px solid color(light);
+
+		// - medium up
+		@include media(m) {
+			float: left; padding: 0 1rem;
+			border: none;
+
+			[class*="no-touchevents"] & {
+				&:hover {
+					background-color: color(primair-2-light);
+				}
+			}
+
+			[class*="touchevents"] & {
+				&[class*="_subMenu_is_open"] {
+					background-color: color(primair-2-light);
+				}
+			}
+		}
+
+		// - large up
+		@include media(l) {
+			padding: 0 gap(small);
+		}
+	}
+
+	.mainNav__link {
+		display: block; padding: gap(xsmall);
+		border-bottom: .3rem solid transparent;
+		font-family: font(special-2); font-size: 1.8rem; color: color(neutrals-3); text-decoration: none;
+
+		// - medium up
+		@include media(m) {
+			font-size: 1.2rem;
+			@include valign;
+			padding: 0;
+
+			[class*="no-touchevents"] .mainNav__item:hover &,
+			[class*="touchevents"] [class*="_subMenu_is_open"] & {
+				color: color(light);
+			}
+		}
+
+		// - large up
+		@include media(l) {
+			font-size: 1.4rem;
+		}
+
+		// - xlarge up
+		@include media(xl) {
+			font-size: 1.6rem;
+		}
+
+
+	}
+
+	.mainNav__link__label {
+		padding-bottom: .2rem;
+
+		[class*="-active"] & {
+			border-bottom: .3rem solid color(action);
+		}
+	}
+
+	.mainNav__icon {
+		margin-left: .5rem;
+		font-size: 40%;
+		transition: transform 250ms;
+
+		[class*="_subMenu_is_open"] & {
+			transform: rotate(180deg);
+		}
+	}
+
+	//=============================================================================================
+	// - THE SUB NAV
+
+	.mainNav__sub {
+		position: absolute; top: 9rem; left: 0; right: 0; z-index: 99;
+		display: none; width: 100%; padding: gap(small) 0;
+		background-color: color(light);
+
+		[class*="_subMenu_is_open"] & {
+			@include pie-clearfix;
+			position: static;
+			display: block; padding: 0;
+		}
+
+		// - medium up
+		@include media(m) {
+			box-shadow: 0 10px 8px -8px color(neutrals-1);
+
+			[class*="no-touchevents"] .mainNav__item:hover & {
+				display: block !important;
+			}
+
+			[class*="touchevents"] & {
+				position: absolute;
+				padding: gap(small) 0;
+			}
+		}
+
+	}
+
+	.mainNav__sub__main {
+		@include pie-clearfix;
+		float: left;
+
+		[class*="_subMenu_is_open"] & {
+			width: 100%;
+		}
+	}
+
+	.mainNav__sub__main__list  {
+		display: block; padding-top: 1rem; padding-right: gap(small); float: left;
+		width: 100%;
+
+		&:last-child {
+			padding-right: 0;
+		}
+
+		[class*="no-touchevents"] [class*="_subMenu_is_open"] & {
+			width: 100%;
+		}
+
+		// - large up
+		@include media(l) {
+			padding: 1rem gap(small) 1rem 0;
+
+			&:nth-child(odd) {
+				clear: none;
+			}
+		}
+	}
+
+	.mainNav__sub__main__item {
+		display: block;
+
+		&:first-child {
+			font-family: font(special-1);
+		}
+	}
+
+	.mainNav__sub__main__link {
+		display: block; padding: 0 gap(small);
+		font-size: 1.4rem; line-height: 1.5; color: color(neutrals-3); text-decoration: none;
+
+		.mainNav__sub__main__item:first-child & {
+			color: color(brand-dark);
+		}
+
+		[class*="no-touchevents"] [class*="_subMenu_is_open"] & {
+			padding: gap(xxsmall) gap(small);
+		}
+
+		[class*="touchevents"] [class*="_subMenu_is_open"] & {
+			padding: gap(xsmall) gap(small);
+		}
+	}
+
+	//=============================================================================================
+	// - THE SUB NAV ASIDE
+
+	.mainNav__sub__aside {
+		margin-top: 1rem; float: left;
+
+		[class*="no-touchevents"] [class*="_subMenu_is_open"] & {
+			width: 100% !important; margin: 0; padding: (gap(small) / 2) gap(xxsmall) gap(small);
+		}
+	}
+
+	.mainNav__sub__aside__list {
+		padding: 0;
+		font-family: font(special-1);
+
+		[class*="no-touchevents"] [class*="_subMenu_is_open"] & {
+			padding-top: gap(small);
+			border-left: none; border-top: .2rem solid color(neutrals-2);
+		}
+
+		@include media(m) {
+			border-left: .3rem solid color(neutrals-1);
+		}
+	}
+
+	.mainNav__sub__aside__link {
+		display: block; padding: 0 gap(small);
+		font-size: 1.4rem; line-height: 1.5; color: color(neutrals-3); text-decoration: none;
+		color: color(brand-dark);
+
+		[class*="no-touchevents"] [class*="_subMenu_is_open"] & {
+			padding: gap(xxsmall) gap(xsmall);
+		}
+
+		[class*="touchevents"] [class*="_subMenu_is_open"] & {
+			padding: gap(xsmall) gap(small);
+		}
+	}
+
+

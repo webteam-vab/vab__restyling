@@ -1,0 +1,255 @@
+// - FUNDAMENTS - TILES
+
+	//=============================================================================================
+	// - THE WRAP
+
+	[class*="tiles__wrap-"] {
+		display: block; width: 100%; height: 100%;
+
+		// - function to set paddings and positions according to breakpoints
+		@each $bpName, $bpValue, $bp in $breakpoints {
+
+			@each $gapName, $gapValue, $gap in $gaps {
+
+				@if $bpName == 'xs' {
+
+					&[class*="-#{$bpName}-#{$gapName}"] {
+
+						// - set padding voor contentblocks
+						& > .tiles__content > .tiles__theContent,
+						& > .tiles__content > .tiles__content__bottom {
+							padding: 0 ($dir-size + .5rem) 1rem 1rem;
+						}
+
+						// - set padding and height for icon
+						& > [class*="tiles__icon"] {
+							padding: 1rem 1rem 0; height: 6rem + 1rem;
+						}
+ 					}
+
+				} @else {
+
+					@include media($bpValue) {
+
+						&[class*="-#{$bpName}-#{$gapName}"] {
+
+							// - set padding voor contentblocks
+							& > .tiles__content > .tiles__theContent,
+							& > .tiles__content > .tiles__content__bottom {
+								padding: 0 ($dir-size + .5rem) $gapValue $gapValue;
+							}
+
+							// - set padding and height for icon
+							& > [class*="tiles__icon"] {
+								padding: $gapValue $gapValue 0; height: 6rem + $gapValue;
+							}
+	 					}
+
+	 				}
+				}
+			}
+		}
+
+	}
+
+	//=============================================================================================
+	// - THE CONTENT
+
+	.tiles__content {
+		position: absolute; left: 0; right: 0; bottom: 0; z-index: 1;
+		width: 100%;  height: auto;
+	}
+
+	.tiles__theContent {
+		position: static;
+		width: 100%;
+
+		[class*="-fixed"] & {
+			position: static;
+		}
+
+		// - medium up
+		@include media(m) {
+			position: relative; top: 100%; left: 0; right: 0;
+			max-width: section(xsmall);
+		}
+	}
+
+	.tiles__content__bottom {
+		position: static;
+		width: 100%; min-height: 3rem;
+		font-size: 1.4rem;
+
+		// - if no touch events
+		// - medium up
+		html[class*="no-touchevents"] & {
+			@include media(m) {
+				position: absolute;
+				top: 100%;
+				left: 0;
+				right: 0;
+				font-size: 1.8rem;
+
+				[class*="-fixed"] & {
+					position: static;
+				}
+			}
+		}
+	}
+
+	//=============================================================================================
+	// - THE ICON
+
+	[class*="tiles__icon"] {
+		position: absolute; top: 0; right: 0; z-index: 3;
+		display: block;
+		font-size: 3rem;
+		opacity: 1;
+		transition: top 600ms, opacity 600ms;
+
+		// - small up
+		@include media(s) {
+			font-size: 6rem;
+		}
+
+		// - medium up
+		@include media(m) {
+			font-size: 4rem;
+		}
+
+		// - large up
+		@include media(l) {
+			font-size: 6rem;
+
+			&:not([class*="--fixed"]) {
+				top: -3rem;
+				opacity: 0;
+			}
+
+			[class*="_is_hovered"] &, html[class~="touchevents"] & {
+				opacity: 1;
+				top: 0;
+			}
+		}
+	}
+
+	//=============================================================================================
+	// - THE GRADIENT
+
+	@each $colorName, $colorValue, $color in $colors {
+
+		.tiles__gradient--#{$colorName} {
+
+			&:after {
+				content: "";
+				position: absolute; left: 0; right: 0; bottom: 0; z-index: -1;
+				display: block; height: auto; min-height: 20rem;
+				@include linear-gradient(to top, $colorValue, transparent);
+
+
+				html[class*="no-touchevents"] & {
+
+					// - medium up
+					@include media(m) {
+						bottom: -220%;
+						height: 400%;
+
+						[class*="-fixed"] & {
+							bottom: -50%;
+						}
+					}
+
+					// - large up
+					@include media(l) {
+						bottom: -200%;
+					}
+
+					// - xlarge up
+					@include media(xl) {
+						bottom: -170%;
+					}
+				}
+
+			}
+		}
+
+	}
+
+	//=============================================================================================
+	// - ADV
+
+	.tiles__adv {
+		border: .5rem solid color(brand-special);
+		text-decoration: none;
+
+		&:hover {
+			border-color: color(primair-1-light);
+		}
+	}
+
+	.tiles__advLabel {
+		position: absolute; top: -.2rem; right: -.2rem; z-index: 1;
+		display: block; width: 3rem; height: 3rem;
+		background-color: color(brand-special);
+		font-size: 1.2rem; text-align: center; line-height: 3rem;
+
+		.tiles__adv:hover & {
+			background-color: color(primair-1-light);
+		}
+	}
+
+	.tiles__adv__visual {
+		display: none;
+
+		// - small up
+		@include media(s) {
+			position: absolute; left: 0; bottom: 0; z-index: -1;
+			display: block; width: 100%; min-height: 14.5rem;
+		}
+	}
+
+	.tiles__adv__content {
+		width: 100%; height: 100%;
+		background-color: color(light);
+		text-align: center;
+
+		// - small up
+		@include media(s) {
+			height: auto;
+		}
+	}
+
+	.tiles__adv__title {
+		padding: 1rem ($dir-size + .5rem) 1rem ($dir-size + .5rem);
+	}
+
+	.tiles__adv__theContent {
+		max-height: 8.6rem; padding: 0 1rem 1rem;
+		font-size: 1.4rem;
+
+		// - medium up
+		@include media(m) {
+			font-size: 1.8rem;
+		}
+	}
+
+	.tiles__adv__dir {
+		position: absolute; bottom: .3rem; right: .3rem;
+		border-color: color(brand-special);
+		color: color(brand-special);
+
+		.tiles__adv:hover &  {
+			border-color: color(primair-1-light);
+			color: color(primair-1-light);
+		}
+	}
+
+	//=============================================================================================
+	// - MISC
+
+	.tiles__dir {
+		position: absolute; bottom: -$dir-brdr; right: -$dir-brdr;
+	}
+
+
+

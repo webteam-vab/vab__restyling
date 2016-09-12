@@ -1,0 +1,14 @@
+// - SELECT
+
+	// - the reset
+	select {
+		position: relative; z-index: 1;
+		display: block; width: 120%; height: auto; padding: 0;
+		color: inherit; font-family: inherit; font-weight: normal; font-size: inherit; line-height: inherit;
+	    border: none; outline: none;
+	    background-color: transparent; background-image: none;
+	    box-shadow: none;
+	    appearance: none;
+	}
+
+	// - check _inputs.scss for the input--select styling

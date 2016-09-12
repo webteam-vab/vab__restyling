@@ -1,0 +1,49 @@
+// - BREADCRUMB
+
+	.breadcrumb__list {
+		display: block; margin: 0; padding: 0; @include clearfix;
+		list-style-type: none;
+	}
+
+	.breadcrumb__item {
+		float: left; display: block; height: 3rem;
+		font-family: font(special-1); font-size: 1.2rem; line-height: 3rem; color: color(brand-dark);
+
+		&[class*="active"] {
+			color: color(primair-2-light);
+		}
+	}
+
+	.breadcrumb__link {
+		float: left; display: block; max-width: 3.5rem; height: 3rem; overflow: hidden;
+		color: color(brand-dark); text-decoration: none; white-space: nowrap; text-overflow: ellipsis;
+
+		// - medium up
+		@include media(m) {
+			max-width: 15rem;
+		}
+
+		.breadcrumb__item:first-child & {
+			max-width: 100%; overflow: visible;
+			text-overflow: initial;
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.breadcrumb__delim {
+		float: right; display: block; width: 1.8rem; height: 3rem; margin-right: .2rem;
+		font-size: .6rem; color: color(brand-dark); line-height: 3rem;
+
+		// - medium up
+		@include media(m) {
+			width: 2rem;
+			font-size: .8rem;
+		}
+
+		&:before {
+			@include valign;
+		}
+	}

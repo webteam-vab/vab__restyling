@@ -1,0 +1,102 @@
+// - LANG NAV
+
+	//=============================================================================================
+	// - THE STYLING
+
+	.langNav {
+
+		.buHeader & {
+			padding: gap(xxsmall) 0 gap(small);
+			background-color: color(brand-dark);
+
+			// - small up
+			@include media(s) {
+				display: none;
+			}
+		}
+
+		[class*="_priorityPlus"] & {
+			display: none;
+
+			// - small up
+			/* @include media(m) {
+				display: block;
+			} */
+		}
+
+		[class*="_priorityPlus__hiddens"] & {
+			display: block;
+
+			// - medium up
+			@include media(m) {
+				display: none;
+			}
+		}
+
+
+
+		[class*="_priorityPlus__open"] & {
+			width: 100%; float: left;
+		}
+
+		// - medium up
+		@include media(m) {
+			width: 5.7rem; float: left;
+		}
+	}
+
+	.langNav__list {
+		position: relative;
+
+		&:before {
+			position: absolute; right: 0.8rem;  top: 0.2rem;
+			display: none;
+			@include icon(chevron-down); font-size: 0.5rem;
+		}
+
+		.buHeader & {
+			padding: 0 gap(xsmall);
+		}
+
+		// - medium up
+		@include media(m) {
+			&:before {
+				display: block;
+			}
+		}
+
+		&[class$="_langNav_open"] {
+			background: color(light);
+			z-index: 1000;
+		}
+
+	}
+
+	.langNav__item {
+		display: inline-block; padding: 0 gap(small);
+
+		// - medium up
+		@include media(m) {
+			display: none;
+
+			&[class*="-active"] {
+				display: block;
+			}
+
+			[class$="_langNav_open"] & {
+				display: block;
+			}
+		}
+	}
+
+	.langNav__link {
+		font-family: font(special-2); font-size: 1.2rem; color: color(neutrals-2); text-decoration: none; text-transform: uppercase;
+
+		[class*="-active"] & {
+			color: color(brand-dark);
+		}
+
+		.buHeader [class*="-active"] & {
+			color: color(light);
+		}
+	}

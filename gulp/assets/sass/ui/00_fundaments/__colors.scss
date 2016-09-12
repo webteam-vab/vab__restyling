@@ -1,0 +1,79 @@
+// - FUNDAMENTS - COLORS
+
+	//=============================================================================================
+	// - THE VARIABLES
+
+	$colors: (
+		'light': #fff,
+		'dark': #000,
+		'action': #FFCC00,
+		'brand-middle': #FD7160,
+		'brand-dark': #00395D,
+		'brand-rich': #FFC473,
+		'brand-special': #FFCC00,
+		'primair-1': #FFCC00,
+		'primair-1-light' : #FFDB4C,
+		'primair-1-dark' : #F2C200,
+		'primair-2': #00395D,
+		'primair-2-light' : #33617E,
+		'primair-2-dark' : #002942,
+		'primair-3': #FFFFFF,
+		'secundair-1': #1887C6,
+		'secundair-1-light': #479FD2,
+		'secundair-1-dark': #1575AD,
+		'negative': #e40404,
+		'positive': #7ED321,
+		'theme-0': #91AF1E,
+		'theme-0-light': #A7BF4B,
+		'theme-0-dark': #7D961A,
+		'theme-1': #80BCE1,
+		'theme-1-light': #97C9E9,
+		'theme-1-dark': #71A6C7,
+		'theme-2': #FFA50D,
+		'theme-2-light': #FFB828,
+		'theme-2-dark': #E6960B,
+		'theme-3': #71B28E,
+		'theme-3-light': #8DC1A5,
+		'theme-3-dark': #60997A,
+		'theme-4': #FFCC00,
+		'theme-4-light': #FFDB4C,
+		'theme-4-dark': #F2C200,
+		'theme-5': #00395D,
+		'theme-5-light': #33617E,
+		'theme-5-dark': #00314F,
+		'theme-6': #951272,
+		'theme-6-light': #A9418D,
+		'theme-6-dark': #7A0F5E,
+		'theme-7': #007BC4,
+		'theme-7-light': #3395D0,
+		'theme-7-dark': #006CAB,
+		'neutrals-0': #F5F5F5,
+		'neutrals-1': #CCCCCC,
+		'neutrals-2': #999999,
+		'neutrals-3': #4A4946,
+	);
+
+	//=============================================================================================
+	// - THE FUNCTION
+
+	@function color($name: false, $mod: false, $amount: 7) {
+
+		@if $mod == light {
+			@return lighten(map-get($colors, quote($name)), $amount);
+		}
+
+		@if $mod == dark {
+			@return darken(map-get($colors, quote($name)), $amount);
+		}
+
+		@if $mod == tone {
+			@return rgba(map-get($colors, quote($name)), .5);
+		}
+
+		@return map-get($colors, quote($name));
+
+	}
+
+	//=============================================================================================
+	// - THE STYLES
+	// see the inlines folder

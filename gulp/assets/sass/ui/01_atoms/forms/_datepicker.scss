@@ -1,0 +1,75 @@
+// - DATEPICKER
+
+	#ui-datepicker-div {
+		background-color: color(light);
+		border: .1rem solid color(neutrals-1);
+	}
+
+	[class*="ui-datepicker-header"] {
+		padding: 3%;
+		background-color: color(brand-dark);
+	}
+
+	[class*="ui-datepicker-prev"],
+	[class*="ui-datepicker-next"] {
+		display: none;
+	}
+
+	[class*="ui-datepicker-title"] {
+		@include pie-clearfix;
+
+		& > select {
+			position: relative;
+			display: block; width: 48.5%; padding: 1rem; margin-right: 3%; float: left;
+			background: color(light) url('/resources/svg/chevron-down.svg') no-repeat 95% center; background-size: 1.5rem;
+			font-weight: bold;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	[class*="ui-datepicker-calendar"] {
+		display: block; padding: 1rem 1rem 2rem;
+		background-color: color(color-light);
+		color: color(brand-dark);
+
+		thead,
+		tbody,
+		th,
+		tr {
+			border: none;
+			background-color: transparent;
+			color: color(brand-dark); font-size: 1.4rem; text-decoration: none;
+		}
+
+		th {
+			font-weight: bold;
+		}
+
+		td {
+			padding: 0.2rem;
+			text-align: center;
+		}
+
+		[class*="ui-state-default"] {
+			display: block; padding: 1rem;
+			color: color(brand-dark); font-size: 1.4rem; text-decoration: none;
+
+
+			&[class*="ui-state-active"] {
+				background-color: color(action);
+			}
+		}
+
+		[class*="ui-state-disabled"] {
+
+			[class*="ui-state-default"] {
+				background-color: color(neutrals-1);
+			}
+		}
+	}
+
+
+

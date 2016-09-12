@@ -1,0 +1,36 @@
+// - NEWSLETTER
+
+    //=============================================================================================
+    // - THE STYLES
+
+    .newsletter__label {
+
+        [class*="_newsletter_is_send"] & {
+            display: none;
+        }
+    }
+
+    .newsletter__form__field {
+        font-size: 2rem;
+
+       &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0px 1000px color(neutrals-0) inset;
+        }
+    }
+
+    .newsletter__errorMessage {
+
+        [class*="_newsletter_failed"] & {
+            display: block;
+        }
+    }
+
+    .newsletter__successMessage {
+        display: none;
+        font-size: 2rem; color: color(neutrals-2);
+        border-bottom: .3rem solid color(neutrals-1);
+
+        [class*="_newsletter_is_send"] & {
+            display: block;
+        }
+    }

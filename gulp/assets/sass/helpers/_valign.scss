@@ -1,0 +1,12 @@
+// - VALIGN
+
+	@mixin valign() {
+		transform: translateY(-50%);
+		position: relative; top: 50%; z-index: 1;
+		margin-top: 0; margin-bottom: 0;
+	}
+
+	@mixin valign-reset() {
+		transform: translateY(0);
+		position: relative; top: 0; z-index: 1;
+	}

@@ -1,0 +1,40 @@
+// - IMMERSIVE CONTENT
+
+	//=============================================================================================
+	// - THE STYLES
+
+	.immersiveContent__wrap {
+		display: block; height: 32rem;
+		border: .3rem solid color(neutrals-0);
+		text-decoration: none;
+	}
+
+	.immersiveContent__visual {
+		display: block; width: 100%; height: 14.5rem;
+		background-size: cover; background-repeat: no-repeat;
+	}
+
+	.immersiveContent__title {
+		display: block; width: 100%; max-height: 6.1rem; padding: gap(xxsmall) gap(small);
+		border-bottom: .3rem solid color(neutrals-0);
+	}
+
+	.immersiveContent__theContent {
+		position: relative;
+		max-height: 8.6rem; padding: gap(small) ($dir-size + .5rem) 0 gap(small);
+	}
+
+	.immersiveContent__dir {
+		position: absolute; bottom: 0; right: 0;
+		border-color: color(neutrals-0);
+		color: color(neutrals-0);
+
+		.immersiveContent__wrap:hover & {
+			border-color: color(theme-4);
+			color: color(theme-4);
+		}
+	}
+
+	.immersiveContent__more {
+		font-size: 1.4rem; text-align: center;
+	}

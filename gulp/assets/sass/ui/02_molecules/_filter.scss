@@ -1,0 +1,135 @@
+// - FILTER
+
+	//=============================================================================================
+	// - VARIABLES
+
+	$controlsSize: 3rem;
+
+	//=============================================================================================
+	// - THE STYLING
+
+	.filter {
+		position: relative;
+		border: .3rem solid color(neutrals-0);
+	}
+
+	.filter__header {
+		position: relative;
+		padding: gap(medium) gap(small) (gap(medium) + $controlsSize) 0;
+	}
+
+	.filter__form {
+		position: relative;
+		flex: 1;
+		padding: gap(medium) 0;
+	}
+
+	.filter__list {
+		@include pie-clearfix;
+	}
+
+	.filter__list__item {
+		display: block; width: 50%; padding: gap(xxsmall); float: left;
+
+		// - medium up
+		@include media(m) {
+			width: (100% / 3);
+		}
+
+		// - medium up
+		@include media(m) {
+			width: 20%;
+		}
+	}
+
+	//=============================================================================================
+	// - MORE FILTERS
+
+	.filter__moreList {
+		@include pie-clearfix;
+		position: relative; width: 100%;
+		padding-bottom: $controlsSize;
+	}
+
+	.filter__list__item {
+
+		[class*="filter__moreList"] & {
+			@extend .filter__list__item;
+
+			&:nth-child(2n+2) {
+				clear: right;
+			}
+
+
+			// - small up
+			@include media(s) {
+
+				&:nth-child(2n+2) {
+					clear: none;
+				}
+
+				&:nth-child(3n+3) {
+					clear: right;
+				}
+
+				&:nth-child(6n+6) {
+					clear: left;
+				}
+			}
+
+			// - medium up
+			@include media(m) {
+
+				&:nth-child(3n+3) {
+					clear: none;
+				}
+
+				&:nth-child(6n+6) {
+					clear: left;
+				}
+			}
+		}
+	}
+
+	//=============================================================================================
+	// - FILTER RESULTS
+
+	.filter__results {
+		position: absolute; left: 0; bottom: 0; z-index: 1;
+		width: 100%; padding-right: gap(small); height: ($controlsSize - .3rem);
+		font-family: font(special-1); font-size: 1.4rem; color: color(neutrals-2);
+
+		& > * {
+			@include valign;
+			display: block;
+			line-height: 1;
+		}
+
+	}
+
+	//=============================================================================================
+	// - MORE FILTERS CONTROL
+
+	.filter__controls {
+		position: absolute; left: 0; right: 0; bottom: 0; z-index: 9;
+		display: block; width: 100%; height: $controlsSize;
+		border-top: .3rem solid color(neutrals-0);
+		text-align: center;
+	}
+
+	.filter__controls__link {
+		@include valign;
+		display: inline-block !important; height: 2rem;
+		font-size: 1.4rem;
+
+		[class*="_priorityPlus__open"] & {
+
+			&:after {
+				transform: translateY(-50%) rotate(180deg);
+			}
+		}
+	}
+
+
+
+

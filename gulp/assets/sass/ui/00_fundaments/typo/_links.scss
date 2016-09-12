@@ -1,0 +1,120 @@
+// - LINKS
+
+//=============================================================================================
+	// - MAIN LINKS
+
+	.link,
+	[class*="link-"] {
+		transition: color 250ms;
+		color: color(primair-1); font-size: 1.4rem; text-decoration: none;
+
+		&:hover {
+			color: color(secundair-1);
+		}
+
+		&[class*="-inherit"] {
+			color: inherit !important; font-size: inherit !important; font-weight: inherit !important; text-decoration: inherit !important;
+		}
+
+		&[class*="-underline"] {
+			color: inherit !important; font-size: inherit !important; font-weight: inherit !important; text-decoration: none !important;
+			border-bottom: 1px solid;
+
+			&:hover {
+				color: color(secundair-1) !important;
+			}
+		}
+
+		[class*='-inverted'] & {
+			color: #fff;
+
+			&:hover {
+				color: inherit !important;
+			}
+		}
+
+		&[class*="-lower"] {
+			font-size: 1.2rem;
+		}
+	}
+
+	//=============================================================================================
+	// - DIRECTIONAL LINKS
+
+	.link,
+	[class*="link-"] {
+
+		// - forward link
+		&[class*="-directional"],
+		&[class*="-fwd"] {
+
+			position: relative;
+			padding-right: 2rem;
+			font-family: font(special-1); text-decoration: none;
+
+			&:after {
+				position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+				transition: 250ms;
+				@include icon(chevron-right);
+				font-size: 90%;
+			}
+
+			&:hover::after {
+				right: -.2rem;
+			}
+
+			// - function for the colors
+			@each $colorName, $colorValue, $color in $colors {
+
+				// - define lighter and darker variant
+				$lighter: #{$colorName}-light;
+				$darker: #{$colorName}-dark;
+
+				&[class*="-#{$colorName}"] {
+					color: $colorValue;
+
+					// make an exception for yellow
+					@if ($colorName == 'primair-1') {
+
+						&:hover {
+							color: color($darker);
+						}
+
+					} @else {
+
+						&:hover {
+							color: color($lighter);
+						}
+
+					}
+
+				}
+
+			}
+
+			// - backward link
+			&[class*="-bkwd"] {
+				padding-right: 0; padding-left: 2rem;
+
+				&:after {
+					position: absolute; left: 0; right: auto;
+					@include icon(chevron-left);
+				}
+			}
+
+			// - downward link
+			&[class*="-dnwd"] {
+
+				&:after {
+					@include icon(chevron-down);
+				}
+
+				&:hover::after {
+					right: 0;
+					margin-top: .2rem;
+				}
+			}
+
+		}
+
+	}

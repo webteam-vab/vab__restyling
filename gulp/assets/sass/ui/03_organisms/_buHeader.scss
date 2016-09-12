@@ -1,0 +1,45 @@
+// - BU HEADER
+
+	//=============================================================================================
+	// - THE STYLING
+	
+	.buHeader {
+		background-color: color(brand-dark);
+	}
+
+	.buHeader__wrap {
+		position: relative;
+		display: none;
+
+		[class*="_buMenu_is_open"] & {
+			display: block;
+		}
+
+		// - large up
+		@include media(s) {
+			display: block;
+		}
+	}
+
+	.buHeader__inner {
+		position: absolute; top: 0; left: 0; right: 0; z-index: 9;
+		width: 100%;
+
+		// - large up
+		@include media(s) {
+			position: static;
+		}
+	}
+
+	//=============================================================================================
+	// - CONTROLS
+
+	.buHeader__mobileControl {
+		height: 4rem; padding: 0 gap(small);
+		background-color: color(brand-dark);
+
+		// - medium up
+		@include media(s) {
+			display: none;
+		}
+	}

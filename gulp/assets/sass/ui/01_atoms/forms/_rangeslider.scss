@@ -1,0 +1,77 @@
+// - RANGESLIDER
+
+	//=============================================================================================
+	// - THE VARIABLES
+
+	$tippySize: .5rem;
+	$tippyColor: color(brand-dark);
+	$rangeOffset: 40px;
+
+	//=============================================================================================
+	// - THE STYLES
+
+	[class*="rangeslider"] {
+		position: relative;
+	  	display: block; height: 1.2rem; width: 100%; margin-top: $rangeOffset;
+	  	background-color: color(neutrals-1);
+	  	border-radius: 50px;
+	}
+
+	[class*="rangeslider__fill"] {
+		position: absolute; top: 0;
+		height: 100%; margin-top: 0;
+	  	background: color(brand-dark);
+	  	border-radius: 50px 0 0 50px;
+	}
+
+	[class*="rangeslider__handle"] {
+		position: absolute; top: (-$rangeOffset) - 5px;
+    	display: inline-block; width: .4rem; height: 2.2rem;
+		background: color(brand-dark);
+		border-radius: 0;
+	  	cursor: pointer; touch-action: pan-y; -ms-touch-action: pan-y;
+	}
+
+	[class*="rangeslider__bubble"] {
+		position: absolute; bottom: 100%;
+	  	display: block; width: 3.6rem; height: 2.5rem; margin-left: -1.85rem; margin-bottom: 1.5rem;
+	  	background-color: $tippyColor;
+	    color: color(light); font-size: 1.2rem; text-align: center; line-height: 2.5rem; font-weight: bold;
+	    border-radius: 0;
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute; left: 0; right: 0;
+			display: block; width: $tippySize; margin: auto;
+			border: $tippySize solid transparent; border-top-color: $tippyColor; border-bottom-width: 0;
+		}
+
+	  	&:before {
+		    bottom: - ($tippySize) + (.1rem);
+	  	}
+
+	 	&:after {
+		    bottom: -$tippySize;
+	  	}
+	}
+
+	[class*="rangeslider__ruler"] {
+		position: relative; bottom: 2.7rem;
+		background-color: transparent;
+	  	font-size: 1.2rem;
+	  	cursor: pointer;
+	}
+
+	[class*="rangeslider__ruler__min"],
+	[class*="rangeslider__ruler__max"] {
+		position: absolute; bottom: 0; left: 0;
+		width: 3.6rem; height: 2.5rem;
+		background-color: color(neutrals-1);
+		color: $tippyColor; font-size: 1.2rem; text-align: center; line-height: 2.5rem; font-weight: bold;
+		border-radius: 0;
+	}
+
+	[class*="rangeslider__ruler__max"] {
+		left: auto; right: 0;
+	}

@@ -1,0 +1,79 @@
+// - CONTACT FOOTER B
+
+    //=============================================================================================
+    // - THE STYLING
+
+    .footerB {
+        padding: 0 gap(small);
+
+        @include media(l) {
+            padding: 0;
+        }
+    }
+
+    .footerB__logo {
+        max-width: 15rem; min-height: 7.5rem; padding: gap(small) 0; margin: 0 auto;
+
+        @include media(m) {
+            margin: 0;
+        }
+    }
+
+    .footerB__top {
+        margin-bottom: gap(small);
+        font-size: 1.4rem;
+
+        @include media(s) {
+            height: 5rem; margin-bottom: 0;
+        }
+    }
+
+    .footerB__content {
+        @include pie-clearfix;
+        position: relative;
+        height: 100%;
+        font-size: 1.2rem;
+    }
+
+    .footerB__link {
+        position: relative;
+        display: block;
+        font-family: font(special-1); font-size: 1.2rem; text-decoration: none;
+
+        &:hover {
+            color: color(secundair-1);
+        }
+    }
+
+    .footerB__icon {
+        position: absolute; top: 0; left: 0;
+        font-size: 2.5rem;
+    }
+
+    .footerB__partners {
+
+        & > img {
+            width: auto; max-width: 100%; margin: 0 auto gap(small);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            // - small up
+            @include media(s) {
+                margin-left: auto;
+            }
+        }
+    }
+
+    //=============================================================================================
+    // - THE BORDERS
+
+    .footerB__borders {
+        border-bottom: .2rem solid color(light);
+
+        // - medium up
+        @include media(m) {
+            border-bottom: none;
+        }
+    }

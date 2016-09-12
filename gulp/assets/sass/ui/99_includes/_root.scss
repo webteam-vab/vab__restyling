@@ -1,0 +1,41 @@
+// - ROOT STYLES
+
+	html {
+		position: relative; z-index: 1;
+		display: block; width: 100%; box-sizing: border-box;
+		font-size: 10px;
+	}
+
+	*, *:before, *:after {
+		box-sizing: inherit;
+	}
+
+	body {
+		position: relative; top: 0; z-index: 1;
+		display: block; width: 100%; margin: 0; padding: 0;
+
+		&[class*="_mainMenu_is_open"] {
+			overflow: hidden;
+		}
+
+		&:before {
+			position: absolute; left: -99999rem;
+			content: "xs";
+
+			@include media(s) {
+				content: "s";
+			}
+
+			@include media(m) {
+				content: "m";
+			}
+
+			@include media(l) {
+				content: "l";
+			}
+
+			@include media(xl) {
+				content: "xl";
+			}
+		}
+	}

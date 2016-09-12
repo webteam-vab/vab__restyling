@@ -1,0 +1,57 @@
+// - CALL NAV
+
+	//=============================================================================================
+	// - THE STYLING
+
+	.callNav {
+		height: 100%; float: left; padding-left: gap(small);
+		
+		// - small up
+		@include media(s) {
+			padding-left: gap(xsmall);
+		}
+
+		// - large up
+		@include media(l) {
+			padding-left: gap(small);
+		}
+	}
+
+	.callNav__link {
+		@include valign;
+		display: block;
+		font-family: font(special-2); font-size: 1.2rem; line-height: 1.5; text-decoration: none;
+
+		// - small up
+		@include media(s) {
+			text-align: center;
+		}
+
+		// - medium up
+		@include media(m) {
+			//padding-left: gap(xxsmall);
+			text-align: left; 
+		}
+
+		// - large up 
+		@include media(l) {
+			padding: 0;
+		}
+	}
+
+	.callNav__icon {
+
+		// - large up 
+		@include media(l) {
+			margin-right: .4rem;
+		}
+	}
+
+	.callNav__nr {
+		display: block;
+
+		// - medium up
+		@include media(m) {
+			display: inline;
+		}
+	}

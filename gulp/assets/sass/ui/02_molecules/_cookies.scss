@@ -1,0 +1,76 @@
+// - COOKIES
+
+	//=============================================================================================
+	// - THE STYLING
+
+	.cookies {
+		display: none; width: 100%;
+		color: #fff; font-family: font(main); font-size: 1.4rem;
+
+		[class*="_cookies_is_visible"] & {
+			display: block;
+		}
+	}
+
+	.cookies__inner {
+		position: relative;
+		display: block; padding: gap(xsmall) (gap(small) * 2) gap(xsmall) 0;
+
+		// - medium up
+		@include media(m) {
+			padding: gap(small) 13rem gap(small) gap(small);
+		}
+	}
+
+	.cookies__closeButton {
+		position: absolute; top: gap(xsmall); right: 0; z-index: 3;
+		display: block; width: 3rem;
+		color: color(light);
+
+
+		// - medium up
+		@include media(m) {
+			top: gap(small);
+			width: auto;
+		}
+	}
+
+	.cookies__closeButton__icon {
+		transition: transform 250ms;
+		float: right; display: block; width: 3rem;
+		font-size: 1.6rem;
+
+		&:hover {
+			transform: rotate(-90deg);
+		}
+
+		// - medium up
+		@include media(m) {
+			font-size: 2rem;
+		}
+	}
+
+	.cookies__closeButton__label {
+		display: none;
+
+		// - medium up
+		@include media(m) {
+			display: inline-block; margin-right: .5rem;
+			color: #fff; font-family: font(main);
+		}
+	}
+
+	.cookies__content {
+		float: left;
+		line-height: 1.3;
+	}
+
+	.cookies__link {
+		display: inline-block;
+		color: inherit;
+
+		// - large up
+		@include media(l) {
+			display: inline; margin-top: 0;
+		}
+	}

@@ -1,0 +1,387 @@
+<content>
+	<audienceNav>
+		<item>
+			<label><![CDATA[Particulier]]></label>
+		</item>
+		<item>
+			<label><![CDATA[Business]]></label>
+		</item>
+		<item>
+			<label><![CDATA[Pers]]></label>
+		</item>
+	</audienceNav>
+	<callNav>
+		<label><![CDATA[Pech?]]></label>
+		<nr><![CDATA[Bel 078 222 222]]></nr>
+	</callNav>
+	<mainNav>
+		<item>
+			<label><![CDATA[Pech-en Reisbijstand]]></label>
+			<subs>
+				<sub>
+					<item>
+						<label><![CDATA[Pech in de Benelux]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Pechbijstand]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Motorbijstand]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Fietsbijstand]]></label>
+					</item>
+				</sub>
+				<sub>
+					<item>
+						<label><![CDATA[Bijstand op reis]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Reisbijstand]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Tijdelijke reisbijstand]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Annulatieverzekering]]></label>
+					</item>
+				</sub>
+				<sub>
+					<item>
+						<label><![CDATA[Combipakketten]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Bijstandspakket]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Vakantiepakket]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Multipakket]]></label>
+					</item>
+				</sub>
+				<aside>
+					<item>
+						<label><![CDATA[Welke bijstand past bij jou?]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Verzekeringsattest aanvragen]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Terugbetaling kosten]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Verkooppunten]]></label>
+					</item>
+				</aside>
+			</subs>
+		</item>
+		<item>
+			<label><![CDATA[Rijschool]]></label>
+			<link><![CDATA[/nl/homepage-business-rijschool]]></link>
+		</item>
+		<item>
+			<label><![CDATA[Banden]]></label>
+			<link><![CDATA[/nl/homepage-business-banden]]></link>
+		</item>
+		<item>
+			<label><![CDATA[Auto]]></label>
+			<subs>
+				<sub>
+					<item>
+						<label><![CDATA[Tweedehandswagens]]></label>
+					</item>
+				</sub>
+				<sub>
+					<item>
+						<label><![CDATA[Diagnosecentrum]]></label>
+					</item>
+				</sub>
+				<sub>
+					<item>
+						<label><![CDATA[Tankkaart]]></label>
+					</item>
+				</sub>
+				<sub>
+					<item>
+						<label><![CDATA[Training en Consult]]></label>
+					</item>
+				</sub>
+				<aside>
+					<item>
+						<label><![CDATA[Autotoebehoren]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Vignetten]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Télépéage badge]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Alle producten]]></label>
+					</item>
+				</aside>
+			</subs>
+		</item>
+		<item>
+			<label><![CDATA[Info en diensten]]></label>
+			<subs>
+				<sub>
+					<item>
+						<label><![CDATA[Wegeninfo]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Verkeersinfo België]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Wegeninfo Europa]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Brandstofprijzen]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Toltarieven]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Druktekalender]]></label>
+					</item>
+				</sub>
+				<sub>
+					<item>
+						<label><![CDATA[Nieuws en reportages]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Mobiliteitsstudies]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Artikels VAB-Magazine]]></label>
+					</item>
+				</sub>
+				<sub>
+					<item>
+						<label><![CDATA[Tools]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Routeplanner]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Fietsrouteplanner]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Carpool app]]></label>
+					</item>
+				</sub>
+				<sub>
+					<item>
+						<label><![CDATA[Webwinkel]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Vignetten]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Télépéage]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Alle producten]]></label>
+					</item>
+				</sub>
+			</subs>
+		</item>
+		<item>
+			<label><![CDATA[VAB-Club]]></label>
+			<subs>
+				<sub>
+					<item>
+						<label><![CDATA[De VAB-Club]]></label>
+					</item>
+				</sub>
+				<sub>
+					<item>
+						<label><![CDATA[Ledenvoordelen]]></label>
+					</item>
+				</sub>
+				<sub>
+					<item>
+						<label><![CDATA[VAB-Magazine]]></label>
+					</item>
+				</sub>
+				<sub>
+					<item>
+						<label><![CDATA[Tankkaart]]></label>
+					</item>
+				</sub>
+				<sub>
+					<item>
+						<label><![CDATA[Wedstrijden]]></label>
+					</item>
+				</sub>
+			</subs>
+		</item>
+	</mainNav>
+	<serviceNav>
+		<item>
+			<label><![CDATA[Bijstand voor bedrijven]]></label>
+		</item>
+		<item>
+			<label><![CDATA[Mijn VAB]]></label>
+		</item>
+		<item>
+			<label><![CDATA[Webwinkel]]></label>
+		</item>
+	</serviceNav>
+	<footer>
+		<general>
+			<item>
+				<subs>
+					<sub>
+						<item>
+							<label><![CDATA[Pech in de Benelux]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Bijstand op reis]]></label>
+						</item>
+					</sub>
+					<sub>
+						<item>
+							<label><![CDATA[Terugbetaling kosten]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Verzekeringsattest]]></label>
+						</item>
+					</sub>
+					<sub>
+						<item>
+							<label><![CDATA[Bijstand voor bedrijven]]></label>
+						</item>
+					</sub>
+				</subs>
+			</item>
+			<item>
+				<subs>
+					<sub>
+						<item>
+							<label><![CDATA[Rijschool]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Banden]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Tweedehandswagens]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Diagnosecentrum]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Tankkaart]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Lekdetecties]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Training en Consult]]></label>
+						</item>
+					</sub>
+				</subs>
+			</item>
+			<item>
+				<subs>
+					<sub>
+						<label><![CDATA[Wegeninfo]]></label>
+						<item>
+							<label><![CDATA[Verkeersinfo België]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Verkeersinfo Europa]]></label>
+						</item>
+					</sub>
+					<sub>
+						<label><![CDATA[Tools]]></label>
+						<item>
+							<label><![CDATA[Routeplanner]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Fietsrouteplanner]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Carpool app]]></label>
+						</item>
+					</sub>
+				</subs>
+			</item>
+			<item>
+				<subs>
+					<sub>
+						<label><![CDATA[VAB-Club]]></label>
+						<item>
+							<label><![CDATA[Nieuws &amp; Reportages]]></label>
+						</item>
+						<item>
+							<label><![CDATA[VAB-Magazine]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Ledenvoordelen]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Wedstrijden]]></label>
+						</item>
+					</sub>
+					<sub>
+						<label><![CDATA[Webwinkel]]></label>
+						<item>
+							<label><![CDATA[Vignetten]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Télépéage]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Carpool app]]></label>
+						</item>
+					</sub>
+				</subs>
+			</item>
+			<item>
+				<subs>
+					<sub>
+						<label><![CDATA[Over VAB]]></label>
+						<item>
+							<label><![CDATA[Contact]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Klantenservice]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Jobs]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Mijn VAB]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Adverteren]]></label>
+						</item>
+					</sub>
+				</subs>
+			</item>
+		</general>
+		<misc>
+			<label><![CDATA[&copy; VAB 2016]]></label>
+			<item>
+				<label><![CDATA[Privacy]]></label>
+			</item>
+			<item>
+				<label><![CDATA[Disclaimer]]></label>
+			</item>
+			<item>
+				<label><![CDATA[Belangenconflictbeleid]]></label>
+			</item>
+			<item>
+				<label><![CDATA[Telematics]]></label>
+			</item>
+			<item>
+				<label><![CDATA[Sitemap]]></label>
+			</item>
+		</misc>
+		<social>
+			<label><![CDATA[Volg ons op]]></label>
+		</social>
+	</footer>
+</content>

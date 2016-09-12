@@ -1,0 +1,140 @@
+// - ICONFONT TEMPLATE
+
+	@font-face {
+		font-family: "VAB-icons";
+		src: url('../fonts/VAB-icons.eot');
+		src: url('../fonts/VAB-icons.eot?#iefix') format('eot'),
+		url('../fonts/VAB-icons.woff') format('woff'),
+		url('../fonts/VAB-icons.ttf') format('truetype'),
+		url('../fonts/VAB-icons.svg#VAB-icons') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	[class*=" vab__icon-"],
+	[class^="vab__icon-"],
+	[class*=" vab__icon-"]:before,
+	[class^="vab__icon-"]:before {
+		// float: left; display: block;
+		display: inline-block;
+		font-family: "VAB-icons"; speak: none; font-size: inherit; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: inherit; text-align: center;
+
+		/* Better Font Rendering =========== */
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	.icon--aandacht:before { content: "\EA01" }
+	.icon--alle-seizoenen:before { content: "\EA02" }
+	.icon--annulatieverzekering:before { content: "\EA03" }
+	.icon--arrow-curved-left:before { content: "\EA04" }
+	.icon--arrow-curved-right:before { content: "\EA05" }
+	.icon--arrow-down:before { content: "\EA06" }
+	.icon--arrow-left:before { content: "\EA07" }
+	.icon--arrow-refresh:before { content: "\EA08" }
+	.icon--arrow-right:before { content: "\EA09" }
+	.icon--arrow-rotate:before { content: "\EA0A" }
+	.icon--arrow-up:before { content: "\EA0B" }
+	.icon--auto:before { content: "\EA0C" }
+	.icon--autorijbewijs:before { content: "\EA0D" }
+	.icon--bagage:before { content: "\EA0E" }
+	.icon--banden:before { content: "\EA0F" }
+	.icon--basket:before { content: "\EA10" }
+	.icon--callcenter:before { content: "\EA11" }
+	.icon--check:before { content: "\EA12" }
+	.icon--chevron-down-circle:before { content: "\EA13" }
+	.icon--chevron-down:before { content: "\EA14" }
+	.icon--chevron-left-circle:before { content: "\EA15" }
+	.icon--chevron-left-double:before { content: "\EA16" }
+	.icon--chevron-left:before { content: "\EA17" }
+	.icon--chevron-right-circle:before { content: "\EA18" }
+	.icon--chevron-right-double:before { content: "\EA19" }
+	.icon--chevron-right:before { content: "\EA1A" }
+	.icon--chevron-up-circle:before { content: "\EA1B" }
+	.icon--chevron-up:before { content: "\EA1C" }
+	.icon--citaat-close:before { content: "\EA1D" }
+	.icon--citaat-open:before { content: "\EA1E" }
+	.icon--citaat:before { content: "\EA1F" }
+	.icon--close:before { content: "\EA20" }
+	.icon--code:before { content: "\EA21" }
+	.icon--depannage-2000:before { content: "\EA22" }
+	.icon--diagnose:before { content: "\EA23" }
+	.icon--download-simple:before { content: "\EA24" }
+	.icon--download:before { content: "\EA25" }
+	.icon--efficientie:before { content: "\EA26" }
+	.icon--email:before { content: "\EA27" }
+	.icon--envelope:before { content: "\EA28" }
+	.icon--facebook-simple:before { content: "\EA29" }
+	.icon--facebook:before { content: "\EA2A" }
+	.icon--fietsbijstand:before { content: "\EA2B" }
+	.icon--fleet-services:before { content: "\EA2C" }
+	.icon--forbidden:before { content: "\EA2D" }
+	.icon--foutparkeerders:before { content: "\EA2E" }
+	.icon--gezin:before { content: "\EA2F" }
+	.icon--home:before { content: "\EA30" }
+	.icon--individu:before { content: "\EA31" }
+	.icon--info:before { content: "\EA32" }
+	.icon--inspectie:before { content: "\EA33" }
+	.icon--kilometerstand:before { content: "\EA34" }
+	.icon--koppel:before { content: "\EA35" }
+	.icon--linkedin-simple:before { content: "\EA36" }
+	.icon--linkedin:before { content: "\EA37" }
+	.icon--locatie-vlootbeheer:before { content: "\EA38" }
+	.icon--locatie:before { content: "\EA39" }
+	.icon--magazine:before { content: "\EA3A" }
+	.icon--media:before { content: "\EA3B" }
+	.icon--mobiele-app:before { content: "\EA3C" }
+	.icon--montage-afspraak:before { content: "\EA3D" }
+	.icon--motor-en-bromfiets:before { content: "\EA3E" }
+	.icon--motorbijstand:before { content: "\EA3F" }
+	.icon--motorhome:before { content: "\EA40" }
+	.icon--ok:before { content: "\EA41" }
+	.icon--onderhoud:before { content: "\EA42" }
+	.icon--ongevalsdetectie:before { content: "\EA43" }
+	.icon--online:before { content: "\EA44" }
+	.icon--pechbijstand:before { content: "\EA45" }
+	.icon--plus:before { content: "\EA46" }
+	.icon--poly:before { content: "\EA47" }
+	.icon--reisbijstand:before { content: "\EA48" }
+	.icon--reportage:before { content: "\EA49" }
+	.icon--rijschool:before { content: "\EA4A" }
+	.icon--routeplanner:before { content: "\EA4B" }
+	.icon--rss:before { content: "\EA4C" }
+	.icon--safe-drivers-plan:before { content: "\EA4D" }
+	.icon--safe-drivers:before { content: "\EA4E" }
+	.icon--search-simple:before { content: "\EA4F" }
+	.icon--search:before { content: "\EA50" }
+	.icon--sms:before { content: "\EA51" }
+	.icon--studie:before { content: "\EA52" }
+	.icon--switch-leftright:before { content: "\EA53" }
+	.icon--switch-updown:before { content: "\EA54" }
+	.icon--takelen:before { content: "\EA55" }
+	.icon--tankkaart:before { content: "\EA56" }
+	.icon--techniek:before { content: "\EA57" }
+	.icon--telefoon:before { content: "\EA58" }
+	.icon--telematics:before { content: "\EA59" }
+	.icon--tip:before { content: "\EA5A" }
+	.icon--track-and-trace:before { content: "\EA5B" }
+	.icon--training-consult:before { content: "\EA5C" }
+	.icon--transport-en-recovery:before { content: "\EA5D" }
+	.icon--transportopleiding:before { content: "\EA5E" }
+	.icon--triangle:before { content: "\EA5F" }
+	.icon--tweedehands:before { content: "\EA60" }
+	.icon--twitter-simple:before { content: "\EA61" }
+	.icon--twitter:before { content: "\EA62" }
+	.icon--upload:before { content: "\EA63" }
+	.icon--verkeersinfo:before { content: "\EA64" }
+	.icon--vervangwagen:before { content: "\EA65" }
+	.icon--vliegtuig:before { content: "\EA66" }
+	.icon--vragen:before { content: "\EA67" }
+	.icon--warning:before { content: "\EA68" }
+	.icon--webwinkel:before { content: "\EA69" }
+	.icon--wegeninfo:before { content: "\EA6A" }
+	.icon--winter:before { content: "\EA6B" }
+	.icon--winterbanden:before { content: "\EA6C" }
+	.icon--youtube-simple:before { content: "\EA6D" }
+	.icon--youtube:before { content: "\EA6E" }
+	.icon--zoek:before { content: "\EA6F" }
+	.icon--zomer:before { content: "\EA70" }
+	.icon--zomerbanden:before { content: "\EA71" }
+	

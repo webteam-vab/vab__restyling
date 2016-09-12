@@ -1,0 +1,55 @@
+// - TABLES
+
+	table,
+	.table {
+		display: table; width: 100%;
+		border-collapse: collapse;
+		text-align: left;
+
+		th,
+		td {
+			padding: 2rem; vertical-align: top;
+			font-size: 1.5rem; line-height: 1.2; color: color(neutrals-3); font-weight: normal;
+		}
+
+		th {
+			font-family: font(special-1); color: color(light); font-size: 1.4rem;
+		}
+	}
+
+	thead,
+	.table__head {
+		border: .1rem solid color(brand-dark);
+		background-color: color(brand-dark);
+		font-size: 1.4rem;
+
+		.table--borderless & {
+			border: none;
+			background-color: transparent;
+		}
+	}
+
+	tbody,
+	.table__body {
+		border: .1rem solid color(neutrals-1);
+
+		tr {
+			border-top: .1rem solid color(neutrals-1);
+
+			&:first-child {
+				border-top: none;
+			}
+
+			&:hover {
+				background-color: color(neutrals-1);
+			}
+		}
+
+		.table--borderless & {
+			border: none;
+
+			tr:first-child {
+				border-top: .1rem solid color(neutrals-1);
+			}
+		}
+	}

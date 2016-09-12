@@ -1,0 +1,13 @@
+// - THE ICON MIXIN
+
+	@mixin icon($icon: false) {
+		@if $icon != false {
+
+			@extend [class*="vab__icon-"] !optional;
+			@extend [class^="vab__icon-"] !optional;
+			@extend [class*=" vab__icon-"] !optional;
+			@extend [class^=" vab__icon-"] !optional;
+			@extend .icon--#{$icon}:before !optional;
+
+		}
+	}

@@ -1,0 +1,47 @@
+// - FORM STEPS
+
+	//=============================================================================================
+	// - THE FUNCTIONS
+
+	// calculate the size of the steps
+	@function the-width($total-steps: 10) {
+
+		// return the width
+		@return (100% / $total-steps);
+
+	}
+
+	// generate step sizes from 10% to 100%
+	@for $i from 1 through 10 {
+
+		[class*="formSteps__list--#{$i}-items"] {
+
+			.formSteps__item {
+				width: the-width($i);
+			}
+		}
+
+	}
+
+	//=============================================================================================
+	// - THE STYLES
+
+	.formSteps {}
+
+	.formSteps__list {
+		@include pie-clearfix;
+	}
+
+	.formSteps__item {
+		display: block; float: left; height: 5.8rem; overflow: hidden;
+	}
+
+	.formSteps__link {
+		display: block; padding: 2rem; height: 100%;
+		background-color: color(neutrals-1);
+		text-align: center; color: color(light); font-family: font(special-1); line-height: 1.2; text-decoration: none;
+
+		&[class*="active"] {
+			background-color: color(brand-dark);
+		}
+	}

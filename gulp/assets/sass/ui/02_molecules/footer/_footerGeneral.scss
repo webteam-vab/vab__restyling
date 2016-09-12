@@ -1,0 +1,195 @@
+   // - FOOTER GENERAL
+
+    //=============================================================================================
+    // - THE STYLING
+
+    .footerGeneral__list {
+        margin-bottom: gap(small);
+
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    .footerGeneral__item { }
+
+    .footerGeneral__link {
+         font-family: font(special-1); font-size: 1.4rem; color: color(brand-dark); text-decoration: none;
+    }
+
+    //=============================================================================================
+    // - THE DROPDOWNS
+
+    .footerGeneral__dd__list {
+        @include pie-clearfix;
+        padding: 0 gap(xxsmall);
+        border-top: .2rem solid color(neutrals-0);
+
+        // - medium up
+        @include media(m) {
+            margin-bottom: gap(small); padding-left: gap(small);
+            border-top: none;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .footerGeneral__dd__item {
+        position: relative;
+        padding: gap(xsmall) 0;
+        font-family: font(special-1); font-size: 1.4rem; color: color(brand-dark); cursor: pointer;
+
+        // - medium up
+        @include media(m) {
+            padding: 0;
+        }
+    }
+
+    .footerGeneral__dd__icon {
+        margin-left: gap(small);
+        font-size: 60%;
+        transition: rotate 250ms;
+
+        [class*="_subMenu_is_open"] & {
+            transform: rotate(180deg);
+        }
+
+        // - medium up
+        @include media(m) {
+            display: none;
+        }
+    }
+
+    .footerGeneral__dd__sub {
+        display: none; padding: gap(xxsmall) 0;
+
+        [class*="_subMenu_is_open"] & {
+            display: block;
+        }
+
+        // - medium up
+        @include media(m) {
+            display: block; padding: 0;
+        }
+    }
+
+    .footerGeneral__dd__sub__list {
+        margin-top: gap(xxsmall);
+        background-color: color(neutrals-0);
+
+        // - medium up
+        @include media(m) {
+            padding: 0; margin: 0;
+            background-color: transparent;
+        }
+    }
+
+    .footerGeneral__dd__sub__link {
+        display: block; padding: gap(xsmall) gap(xxsmall);
+        font-family: font(special-2); color: color(neutrals-2); font-size: 1.2rem; line-height: 1.7; text-decoration: none;
+
+        // - medium up
+        @include media(m) {
+            padding: 0;
+        }
+    }
+
+    //=============================================================================================
+    // - THE BORDERS
+
+    .footerGeneral__borders {
+        border-left: .2rem solid color(neutrals-0);
+
+        // - small up
+        @include media(s) {
+             border-left: .3rem solid color(neutrals-0);
+        }
+
+        // - medium up
+        @include media(m) {
+            border-left: none;
+        }
+    }
+
+
+    //=============================================================================================
+    // - MISC
+
+     .footerGeneral__misc {
+        @include pie-clearfix;
+        position: relative;
+        padding: 7rem 0 gap(small);
+        border-top: .3rem solid color(neutrals-0);
+
+        // - medium up
+        @include media(m) {
+            padding-top: gap(small);
+        }
+    }
+
+    .footerGeneral__misc__nav {
+        padding: gap(small) gap(xsmall) 0; width: 100%; float: left;
+        border-top: .3rem solid color(neutrals-0);
+
+        // - medium up
+        @include media(m) {
+            width: 70%; padding: 0;
+            border-top: none;
+        }
+    }
+
+    .footerGeneral__misc__nav__list {
+        @include pie-clearfix;
+        text-align: center;
+
+        // - medium up
+        @include media(m) {
+            text-align: left;
+        }
+    }
+
+    .footerGeneral__misc__nav__item {
+        display: inline-block; padding: 0 gap(xxsmall);
+        font-family: font(special-1); font-size: 1.2rem; color: color(brand-dark);
+   }
+
+    .footerGeneral__misc__nav__link {
+        font-size: 1.2rem; color: color(brand-dark); text-decoration: none;
+    }
+
+    //=============================================================================================
+    // - SOCIAL
+
+    .footerGeneral__social {
+        position: absolute; top: 2.5rem; left: gap(xsmall); z-index: 1;
+
+        // - medium up
+        @include media(m) {
+            position: static;
+            width: 30%; float: left;
+        }
+    }
+
+    .footerGeneral__social__list {
+        @include pie-clearfix;
+        float: right;
+    }
+
+    .footerGeneral__social__item {
+        display: block; padding: 0 gap(xxsmall); float: left;
+        font-family: font(special-1); font-size: 1.4rem; color: color(brand-dark); text-decoration: none;
+    }
+
+    .footerGeneral__social__link {
+        display: block;
+        font-size: 3rem; color: color(brand-dark); text-decoration: none;
+    }
+
+    .footerGeneral__social__icon {
+        display: block; margin-top: -.5rem;
+        line-height: 1;
+    }

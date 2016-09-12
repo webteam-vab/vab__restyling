@@ -1,0 +1,37 @@
+// - MISC
+
+	.noWrap {
+		white-space: nowrap;
+	}
+
+	.introText {
+		margin: 0; max-width: 100%;
+		font-size: 1.6rem;
+
+		// - small up
+		@include media(s) {
+			font-size: 1.8rem; line-height: 2.6rem;
+		}
+	}
+
+	.screenReader {
+		display: block; height: 0;
+		text-align: left; text-indent: -99999rem;
+	}
+
+	.caption {
+		font-size: 1.4rem; line-height: 2rem; font-style: italic; color: color(neutrals-2);
+	}
+
+	[class*="-va-"] {
+		&[class*="-sub"] {
+			vertical-align: sub;
+		}
+		&[class*="-middle"] {
+			vertical-align: middle;
+		}
+	}
+
+	.clear {
+		clear: both;
+	}

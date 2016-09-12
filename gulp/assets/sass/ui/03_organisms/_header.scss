@@ -1,0 +1,310 @@
+// - HEADER
+
+	//=============================================================================================
+	// - THE VARIABLES
+
+	// - logo sizes
+	$logoBig: 13rem;
+	$logoSmall: 7.5rem;
+
+	// - header sizes
+	$headerSub: 7rem;
+	$headerBig: 5rem;
+	$headerSmall: 4rem;
+
+	//=============================================================================================
+	// - THE STYLING
+
+	.header {
+		position: relative;
+
+		// - medium up
+		@include media(m) {
+			height: auto;
+		}
+
+		[class*="_mainMenu_is_open"] & {
+			position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+			background-color: color(neutrals-0);
+			height: 100%; width: 100%;
+			overflow-y: auto;
+		}
+	}
+
+	.header__wrap {
+
+		[class*="_mainMenu_is_open"] & {
+			position: relative; top: 0; left: 0; right: 0; z-index: 9999;
+			padding-top: (gap(small) / 2); padding-bottom: 4.5rem;
+			background-color: color(neutrals-0);
+		}
+
+		// - medium up
+		@include media(m) {
+			//padding-bottom: gap(large);
+
+			&:after {
+				content: '';
+				display: block; width: 100%; height: 5rem;
+				background-color: color(neutrals-0);
+			}
+		}
+	}
+
+	.header__inner {
+		@include pie-clearfix;
+		position: relative;
+		margin-left: 0; margin-right: 0;
+
+		// - medium up
+		@include media(m) {
+			margin-left: - gap(small); margin-right: - gap(small);
+		}
+	}
+
+	//=============================================================================================
+	// - HEADER MAIN
+
+	.header__main {
+		@include pie-clearfix;
+		display: none; width: 100%; float: left;
+		background-color: color(neutrals-0);
+
+		[class*="_mainMenu_is_open"] & {
+			position: relative; z-index: 999;
+			display: block;
+		}
+
+		// - medium up
+		@include media(m) {
+			display: block; margin-top: $headerSmall; margin-bottom: - ($headerBig + $headerSmall); padding-left: $logoBig + gap(small); height: $headerBig;
+			padding-left: ($logoBig);
+		}
+
+		// - large up
+		@include media(m) {
+			padding-left: $logoBig + gap(small);
+		}
+
+		.mainNav__sub {
+
+			// - medium up
+			@include media(m) {
+				padding-left: $logoBig + (gap(xsmall) * 2);
+			}
+
+			// - large up
+			@include media(l) {
+				padding-left: $logoBig + (gap(small) * 2);
+			}
+		}
+	}
+
+	//=============================================================================================
+	// - HEADER LOWER
+
+	.header__lower {
+		@include pie-clearfix;
+		position: relative;
+		display: none; width: 100%; float: left;
+		line-height: $headerSmall;
+
+		[class*="_mainMenu_is_open"] & {
+			display: block;
+		}
+
+		[class*="page--bu"] & {
+			display: none;
+
+			// - medium up
+			@include media(m) {
+				display: block;
+			}
+		}
+
+		// - medium up
+		@include media(m) {
+			display: block; width: auto; height: $headerSmall; padding-right: gap(small); float: right;
+		}
+	}
+
+
+	//=============================================================================================
+	// - HEADER OPTIONAL
+
+	.header__optional {
+		position: absolute; bottom: 0; z-index: 1;
+		display: none; width: 100%;
+		background-color: color(light);
+
+		[class*="_mainMenu_is_open"] & {
+			display: block;
+		}
+
+		// - medium up
+		@include media(m) {
+			position: static;
+			display: block;
+		}
+	}
+
+
+	//=============================================================================================
+	// - THE LOGO
+
+	.header__logo {
+		position: absolute; top: 0; bottom: 0; left: 0; z-index: 1;
+		margin-left: gap(xsmall); padding: 1rem .75rem; width: $logoSmall; height: $headerSmall + 2rem;
+		background-color: color(light);
+		border-left: .3rem solid color(neutrals-0); border-right: .3rem solid color(neutrals-0);
+
+		[class*="_mainMenu_is_open"] & {
+			display: none;
+		}
+
+		// - medium up
+		@include media(m) {
+			width: $logoBig - 2rem; height: $headerSmall + $headerBig; margin-left: gap(small); padding: 2rem 1rem;
+		}
+
+		// - large up
+		@include media(m) {
+			padding: 2rem 1.5rem; width: $logoBig;
+		}
+
+	}
+
+	//=============================================================================================
+	// - CALLOUT
+
+	.header__callout {
+		position: absolute; top: (gap(small) / 2); left: 0; z-index: 1;
+		@include pie-clearfix;
+		display: block; padding-left: $logoSmall + gap(small); height: $headerBig;
+
+		[class*="_mainMenu_is_open"] & {
+			display: none;
+		}
+
+		// - small up
+		@include media(s) {
+			left: 50%; transform: translateX(-50%);
+			padding-left: 0;
+		}
+
+		// - medium up
+		@include media(m) {
+			top: 0; left: 0; transform: translateX(0);
+			padding-left: $logoBig + gap(small); height: $headerSmall;
+		}
+	}
+
+	//=============================================================================================
+	// - SEARCH
+
+	.header__search {
+		position: absolute; top: 0; left: 0; z-index: 999;
+		display: none; height: $headerBig; width: $headerBig;
+
+		[class*="_mainMenu_is_open"] & {
+			display: block;
+		}
+
+		// - medium up
+		@include media(m) {
+			top: 100%; left: auto; right: 0;
+			display: block; margin-right: gap(small); float: right;
+		}
+	}
+
+	//=============================================================================================
+	// - BASKET
+
+	.header__basket {
+		position: absolute; top: $headerBig + gap(xsmall); right: gap(small); z-index: 99;
+
+		// - small up
+		@include media(s) {
+			top: 8rem;
+		}
+
+		// - medium up
+		@include media(m) {
+			position: static;
+			display: block; width: auto; height: $headerSmall; float: right;
+		}
+
+	}
+
+
+	//=============================================================================================
+	// - CONTROLS
+
+	.header__main__mobileControl {
+		margin-top: (gap(small) / 2); padding-left: $logoSmall + gap(small); padding-right: gap(small); height: $headerBig; width: 100%; float: left;
+		background-color: color(neutrals-0);
+
+		[class*="_mainMenu_is_open"] & {
+			margin-top: 0;
+		}
+
+		// - medium up
+		@include media(m) {
+			display: none; margin-top: $headerSmall;
+		}
+	}
+
+	//=============================================================================================
+	// - THE HAMBURGER MENU
+
+	// - variables
+	$burgerSize: 3rem;
+	$burgerH: .3rem;
+
+	// - styles for burger menu
+	.burgerSlice {
+		display: block; width: $burgerSize; height: $burgerH;
+		background-color: color(brand-dark);
+	}
+
+	// - styling
+	.header__burgerMenu__link {
+		position: relative; z-index: 99;
+		display: block; height: 100%; float: right;
+	}
+
+	.header__theBurger {
+		@include valign;
+		@extend .burgerSlice;
+		transition: 250ms;
+		float: right;
+
+		&:before {
+			content: '';
+			@extend .burgerSlice;
+			position: absolute; top: -($burgerH * 2);
+		}
+
+		&:after {
+			content: '';
+			@extend .burgerSlice;
+			position: absolute; top: ($burgerH * 2);
+		}
+
+		[class*="_mainMenu_is_open"] & {
+			background-color: transparent;
+
+			&:before {
+				transform: rotate(45deg);
+				background-color: color(neutrals-2);
+			}
+
+			&:after {
+				top: -($burgerH * 2);
+				transform: rotate(-45deg);
+				background-color: color(neutrals-2);
+			}
+		}
+	}
+
+

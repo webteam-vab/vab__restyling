@@ -1,0 +1,17 @@
+// - CTA
+
+	//=============================================================================================
+	// - THE STYLES
+
+	.cta {}
+
+	.cta__content {
+		position: relative;
+		min-height: 15rem; margin-bottom: gap(small) * 3; padding: gap(small);
+		color: color(neutrals-3);
+	}
+
+	.cta__theCta {
+		position: absolute; left: 0; right: 0; bottom: 0;
+		padding-bottom: gap(small);
+	}

@@ -1,0 +1,59 @@
+// - PAGING
+
+	.paging {
+		text-align: center;
+	}
+
+	.paging__list {
+		@include pie-clearfix;
+		display: inline-block;
+	}
+
+	[class*="paging__list__item"] {
+		display: inline-block; width: 3.5rem; height: 3.5rem; margin: 0 0.2rem; float: left;
+		background-color: color(neutrals-1);
+		text-align: center; font-size: 1.4rem; line-height: 3.5rem;
+		border: .1rem solid color(neutrals-1);
+
+		&[class*="-prev"],
+		&[class*="-next"] {
+			background-color: transparent;
+		}
+
+		&[class*="-inverted"] {
+			background-color: color(brand-dark);
+		}
+
+		&[class*="-first"],
+		&[class*="-last"] {
+			width: auto; margin-right: 1.5rem;
+			background-color: transparent;
+			text-decoration: underline;
+			border: 0;
+		}
+
+		&[class*="-last"] {
+			margin-right: 0; margin-left: 1.5rem;
+		}
+	}
+
+	.paging__link {
+		color: color(brand-dark); text-decoration: none;
+
+		[class*="-inverted"] & {
+			background-color: color(brand-dark);
+			color: color(light);
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.paging__icon {
+		margin: 0; float: none;
+
+		&:hover {
+			color: color(secundair-1);
+		}
+	}

@@ -1,0 +1,20 @@
+// - PRIORITY PLUS
+
+//=============================================================================================
+	// - THE STYLING
+
+	[class*="_priorityPlus__trigger"] {
+		display: none;
+	}
+
+	[class*="_priorityPlus__hiddens"] {
+		display: none;
+
+		[class*="_priorityPlus__open"] & {
+			display: block;
+		}
+
+		& > * {
+			display: block;
+		}
+	}

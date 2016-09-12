@@ -1,0 +1,348 @@
+<content>
+	<audienceNav>
+		<item>
+			<label><![CDATA[Privé]]></label>
+		</item>
+		<item>
+			<label><![CDATA[Professionnels]]></label>
+		</item>
+		<item>
+			<label><![CDATA[Presse]]></label>
+		</item>
+	</audienceNav>
+	<callNav>
+		<label><![CDATA[En panne ?]]></label>
+		<nr><![CDATA[Appelez 078 222 222]]></nr>
+	</callNav>
+	<mainNav>
+		<item>
+			<label><![CDATA[Assistances Dépannage et Voyage]]></label>
+			<subs>
+				<sub>
+					<item>
+						<label><![CDATA[Panne dans le Benelux]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Assistance Dépannage]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Assistance Moto]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Assistance Vélo]]></label>
+					</item>
+				</sub>
+				<sub>
+					<item>
+						<label><![CDATA[Assistance Voyage]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Assistance Voyage]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Assistance Voyage temporaire]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Assurance Annulation]]></label>
+					</item>
+				</sub>
+				<sub>
+					<item>
+						<label><![CDATA[Formules]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Formule Assistance]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Formule Vacances]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Formule Multi]]></label>
+					</item>
+				</sub>
+				<aside>
+					<item>
+						<label><![CDATA[Quelle assistance pour vous ?]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Demande de certificats d’assurance]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Remboursement de frais]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Points de vente]]></label>
+					</item>
+				</aside>
+			</subs>
+		</item>
+		<item>
+			<label><![CDATA[Auto-école]]></label>
+			<link><![CDATA[/fr/homepage-business-rijschool]]></link>
+		</item>
+		<item>
+			<label><![CDATA[Pneus]]></label>
+			<link><![CDATA[/fr/homepage-business-banden]]></link>
+		</item>
+		<item>
+			<label><![CDATA[Auto]]></label>
+			<subs>
+				<!--<sub>
+					<item>
+						<label><![CDATA[Véhicules d’occasion]]></label>
+					</item>
+				</sub>-->
+				<!--<sub>
+					<item>
+						<label><![CDATA[Centre de diagnostic]]></label>
+					</item>
+				</sub>-->
+				<sub>
+					<item>
+						<label><![CDATA[Carte carburant]]></label>
+					</item>
+				</sub>
+				<sub>
+					<item>
+						<label><![CDATA[Training &amp; Consult]]></label>
+					</item>
+				</sub>
+				<aside>
+					<!--<item>
+						<label><![CDATA[Accessoires auto]]></label>
+					</item>-->
+					<!--<item>
+						<label><![CDATA[Vignettes]]></label>
+					</item>-->
+					<item>
+						<label><![CDATA[Badge Télépéage]]></label>
+					</item>
+					<!--<item>
+						<label><![CDATA[Tous les produits]]></label>
+					</item>-->
+				</aside>
+			</subs>
+		</item>
+		<item>
+			<label><![CDATA[Info et Services]]></label>
+			<subs>
+				<sub>
+					<item>
+						<label><![CDATA[Info Routière]]></label>
+					</item>
+					<!--<item>
+						<label><![CDATA[Info routière Belgique]]></label>
+					</item>-->
+					<item>
+						<label><![CDATA[Info routière Europe]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Prix des Carburants]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Tarifs douaniers]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Baromètre du trafic]]></label>
+					</item>
+				</sub>
+				<sub>
+					<item>
+						<label><![CDATA[Nouveautés et Reportages]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Études de Mobilité]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Articles VAB-Magazine]]></label>
+					</item>
+				</sub>
+				<sub>
+					<item>
+						<label><![CDATA[Outils]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Itinéraires]]></label>
+					</item>
+					<!--<item>
+						<label><![CDATA[Itinéraires à vélo]]></label>
+					</item>-->
+					<item>
+						<label><![CDATA[Carpool app]]></label>
+					</item>
+				</sub>
+				<!--<sub>
+					<item>
+						<label><![CDATA[Boutique en ligne]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Vignettes]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Badge Télépéage]]></label>
+					</item>
+					<item>
+						<label><![CDATA[Tous les produits]]></label>
+					</item>
+				</sub>-->
+			</subs>
+		</item>
+		<item>
+			<label><![CDATA[Club VAB]]></label>
+			<subs>
+				<sub>
+					<item>
+						<label><![CDATA[Le Club VAB]]></label>
+					</item>
+				</sub>
+				<sub>
+					<item>
+						<label><![CDATA[Avantages membres]]></label>
+					</item>
+				</sub>
+				<sub>
+					<item>
+						<label><![CDATA[VAB-Magazine]]></label>
+					</item>
+				</sub>
+				<sub>
+					<item>
+						<label><![CDATA[Carte carburant]]></label>
+					</item>
+				</sub>
+				<sub>
+					<item>
+						<label><![CDATA[Concours]]></label>
+					</item>
+				</sub>
+			</subs>
+		</item>
+	</mainNav>
+	<serviceNav>
+		<item>
+			<label><![CDATA[Assistance Entreprises]]></label>
+		</item>
+		<item>
+			<label><![CDATA[Affiliation en ligne]]></label>
+		</item>
+	</serviceNav>
+	<footer>
+		<general>
+			<item>
+				<subs>
+					<sub>
+						<item>
+							<label><![CDATA[Panne dans le Benelux]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Assistance Voyage]]></label>
+						</item>
+					</sub>
+					<sub>
+						<item>
+							<label><![CDATA[Remboursement de frais]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Demande de certificats d’assurance]]></label>
+						</item>
+					</sub>
+					<sub>
+						<item>
+							<label><![CDATA[Assistance Entreprises]]></label>
+						</item>
+					</sub>
+				</subs>
+			</item>
+			<item>
+				<subs>
+					<sub>
+						<item>
+							<label><![CDATA[Auto-école]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Pneus]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Carte carburant]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Training &amp; Consult]]></label>
+						</item>
+					</sub>
+				</subs>
+			</item>
+			<item>
+				<subs>
+					<sub>
+						<label><![CDATA[Info Routière]]></label>
+						<item>
+							<label><![CDATA[Info routière Europe]]></label>
+						</item>
+					</sub>
+					<sub>
+						<label><![CDATA[Outils]]></label>
+						<item>
+							<label><![CDATA[Itinéraires]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Carpool app]]></label>
+						</item>
+					</sub>
+				</subs>
+			</item>
+			<item>
+				<subs>
+					<sub>
+						<label><![CDATA[Club VAB]]></label>
+						<item>
+							<label><![CDATA[Nouveautés &amp; Reportages]]></label>
+						</item>
+						<item>
+							<label><![CDATA[VAB-Magazine]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Avantages membres]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Concours]]></label>
+						</item>
+					</sub>
+				</subs>
+			</item>
+			<item>
+				<subs>
+					<sub>
+						<label><![CDATA[À propos de VAB]]></label>
+						<item>
+							<label><![CDATA[Contact]]></label>
+						</item>
+						<item>
+							<label><![CDATA[Jobs]]></label>
+						</item>
+					</sub>
+				</subs>
+			</item>
+		</general>
+		<misc>
+			<label><![CDATA[&copy; VAB 2016]]></label>
+			<item>
+				<label><![CDATA[Vie privée]]></label>
+			</item>
+			<item>
+				<label><![CDATA[Disclaimer]]></label>
+			</item>
+			<item>
+				<label><![CDATA[Politique en matière de conflits d&#39;intérets]]></label>
+			</item>
+			<item>
+				<label><![CDATA[VAB-Telematics]]></label>
+			</item>
+			<item>
+				<label><![CDATA[Sitemap]]></label>
+			</item>
+		</misc>
+		<social>
+			<label><![CDATA[Volg ons op]]></label>
+		</social>
+	</footer>
+</content>

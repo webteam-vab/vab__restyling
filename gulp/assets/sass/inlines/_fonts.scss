@@ -1,0 +1,28 @@
+// - FONTS
+
+	//=============================================================================================
+	// - SIZES
+
+	@each $fontSizeModName, $fontSizeModValue, $fontSizeMod in $fontSizeMods {
+
+		.fs--#{$fontSizeModName} { font-size: $fontSizeModValue; }
+
+	}
+
+	//=============================================================================================
+	// - FONT-FAMILY
+
+	[class*="ff--special"] {
+
+		&[class*="-special-1"] {
+			font-family: font(special-1);
+		}
+
+		&[class*="-special-2"] {
+			font-family: font(special-2);
+		}
+	}
+
+	.ff--main    {
+		font-family: font(main);
+	}

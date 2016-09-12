@@ -1,0 +1,65 @@
+// - RADIO BUTTON
+
+	input[type="radio"] {
+		position: absolute; left: -99999rem; z-index: 1;
+		display: block;
+	}
+
+	.input__radio {
+		position: absolute; top: 0; left: 0; z-index: 1;
+		display: block; width: $checkboxSize; height: $checkboxSize; margin-right: 1.3rem;
+		color: color(brand-dark); font-size: 1rem;
+		border: .2rem solid color(brand-dark); border-radius: 50%;
+		background-color: #fff;
+
+		:checked ~ & {
+			color: #fff;
+			border-color: color(brand-dark);
+			background-color: color(brand-dark);
+		}
+
+		[disabled] ~ & {
+			// color: color(neutrals-0);
+			border-color: color(neutrals-1);
+			background-color: color(neutrals-1);
+		}
+
+		[disabled]:checked ~ & {
+			// color: color(neutrals-1);
+			border-color: color(neutrals-1);
+			background-color: color(neutrals-1);
+		}
+
+		.errorTarget.error & {
+			color: #fff;
+			border-color: color(negative);
+			background-color: #fff;
+		}
+
+		// inner dot
+		&:after {
+			@include valign;
+			position: absolute; left: 50%;
+			display: block; width: 1.4rem; height: 1.4rem; margin-left: -(1.4rem) / 2;
+			content: "";
+			border-radius: 50%;
+			background-color: #fff;
+
+			:checked ~ & {
+				background-color: color(brand-dark);
+				border: .2rem solid color(light);
+			}
+
+			[disabled] ~ & {
+				background-color: color(neutrals-1);
+			}
+
+			[disabled]:checked ~ & {
+				background-color: #fff;
+			}
+
+			.errorTarget.error & {
+				background-color: #fff;
+			}
+		}
+	}

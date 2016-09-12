@@ -1,0 +1,88 @@
+// - CONTACT FOOTER A
+
+    //=============================================================================================
+    // - THE STYLING
+
+    .footerA {
+        border-top: .3rem solid color(neutrals-0); border-bottom: .3rem solid color(neutrals-0);
+    }
+
+    .footerA__logo {
+        margin: 0 auto; min-height: 10rem; width: 100%; max-width: 200px;
+        padding: gap(small) gap(small) gap(small) 0;
+
+        // - medium up
+        @include media(m) {
+           position: absolute;
+        height: 100%;
+        }
+    }
+
+    .footerA__theLogo {
+
+        // - medium up
+        @include media(m) {
+            position: absolute; top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .footerA__content {
+        @include pie-clearfix;
+        position: relative;
+        height: 100%; padding: 0 gap(xxsmall);
+        font-size: 1.2rem; color: color(brand-dark);
+
+       /// - medium up
+        @include media(m) {
+            padding: 0;
+        }
+    }
+
+ 	//=============================================================================================
+    // - THE BORDERS
+
+    .footerA__borders {
+        border-right: .3rem solid color(neutrals-0);
+
+        &:first-child {
+            border-right: none; border-bottom: .3rem solid color(neutrals-0);
+        }
+
+        &:nth-child(2) {
+            border-right: none; border-bottom: .3rem solid color(neutrals-0);
+        }
+
+        &:last-child{
+            border-right: none;
+        }
+
+        // - small up
+        @include media(s) {
+
+            &:nth-child(2) {
+                 border-bottom: none;
+            }
+
+            &:last-child {
+                border-left: .3rem solid color(neutrals-0);
+            }
+        }
+
+        // - medium up
+        @include media(m) {
+            border-right: .3rem solid color(neutrals-0);
+
+            &:first-child {
+                border: none; border-right: .3rem solid color(neutrals-0);
+            }
+
+            &:nth-child(2) {
+                border-bottom: none; border-right: .3rem solid color(neutrals-0);
+            }
+
+             &:last-child {
+                border-bottom: none; border-left: none;
+            }
+        }
+    }

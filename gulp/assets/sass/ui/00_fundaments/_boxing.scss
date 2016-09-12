@@ -1,0 +1,549 @@
+// - FUNDAMENTS - BOXING
+
+	//=============================================================================================
+	// - THE VARIABLES
+
+	$breakpoints: (
+		'xs'	: 0,
+		's'		: 63.0rem,
+		'm' 	: 80.0rem,
+		'l' 	: 96.0rem,
+		'xl' 	: 118.0rem,
+		'xxl'	: 133.0rem,
+	);
+
+	$sections: (
+		'xxsmall':  40.0rem,
+		'xsmall':   63.0rem,
+		'small'	:   77.0rem,
+		'medium':   96.0rem,
+		'large'	:  118.0rem,
+		'xlarge':  133.0rem,
+		'xxlarge': 140.0rem
+	);
+
+	$gaps: (
+		'xxsmall':	 .7rem,
+		'xsmall' :	1.4rem,
+		'small'  :	2.0rem,
+		'medium' :	4.0rem,
+		'large'  :	5.0rem,
+		'xlarge' :	7.5rem,
+		'xxlarge': 12.0rem
+	);
+
+	$sizers: (
+		'quarter': 25%,
+		'oneThird': (100% / 3),
+		'hero': 40%,
+		'rect':	50%,
+		'twoThird': (100% / 3) * 2,
+		'square': 100%,
+		'stretched': 150%,
+	);
+
+	$brdrDirs : (
+		'bt',
+		'bb',
+		'bl',
+		'br',
+	);
+
+	$brdrSizes: (2,3);
+
+	$percentages: ( 1, 2, 3, 4, 5, 10, 12, 15, 20, 25, 30, 33, 35, 40, 42, 44, 45, 46, 50, 55, 60, 65, 66, 70, 75, 80, 85, 90, 95, 100 );
+
+	//=============================================================================================
+	// - THE MIXINS
+
+	// - NOTE:
+	// - some browser do something funky when media queries are with rem units
+	// - thats why we convert them to pixels before using them
+
+	// - THE MEDIA QUERY
+	@mixin media($size, $what: 'min-width') {
+
+		@if type-of($size) == 'string' {
+
+			$size: map-get($breakpoints, $size);
+
+		}
+
+		$size: make-it-px($size);
+
+		@media all and (#{$what}: $size) {
+			@content;
+		}
+	}
+
+	//=============================================================================================
+	// - THE FUNCTIONS
+
+	// - CONVERT TO PX
+	@function make-it-px($value) {
+		@if is-px($value) {
+			@return $value;
+		}
+
+		@return strip-unit($value) * 10px;
+	}
+
+	// - STRIP UNITS
+	@function strip-unit($value) {
+		@return $value / ($value * 0 + 1);
+	}
+
+	// - CHECK IF VALUE HAS PIXEL UNIT
+	@function is-px($value) {
+		@return index('px', unit($value)) != null;
+	}
+
+	// - GET BREAKPOINT SIZE
+	@function bp($size: xs) {
+		@return map-get($breakpoints, $size);
+	}
+
+	// - GET SECTION SIZE
+	@function section($size: xs) {
+		@return map-get($sections, $size);
+	}
+
+	// - GET GAP SIZE
+	@function gap($size: xs) {
+		@return map-get($gaps, $size);
+	}
+
+	//=============================================================================================
+	// - THE STYLING
+
+	.grid {
+		overflow: hidden;
+	}
+
+	main,
+	section,
+	header,
+	footer,
+	nav {
+		display: block;
+	}
+
+	//=============================================================================================
+	// - BORDERS
+
+
+	//=============================================================================================
+	// - FLEX
+
+	[class*="layout-"] {
+		display: block; //min-height: 1px;
+
+		@each $bpName, $bpValue, $bp in $breakpoints {
+
+			@include media($bpValue) {
+
+				&[class*="-#{$bpName}-flex"] {
+					display: flex; display: -ms-flexbox; // IE10
+					flex-wrap: wrap; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap;
+				}
+
+				&[class*="-#{$bpName}-flex-reset"] {
+					display: block;
+				}
+			}
+
+		}
+
+	}
+
+	//=============================================================================================
+	// - THE TEXT ALIGNMENTS
+
+	[class*="ta-"] {
+
+		@each $bpName, $bpValue, $bp in $breakpoints {
+
+			@if $bpName == 'xs' {
+
+				&[class*="-#{$bpName}-left"] {
+					text-align: left;
+				}
+
+				&[class*="-#{$bpName}-right"] {
+					text-align: right;
+				}
+
+				&[class*="-#{$bpName}-center"] {
+					text-align: center;
+				}
+
+			} @else {
+
+				@include media($bpValue) {
+					&[class*="-#{$bpName}-left"] {
+						text-align: left;
+					}
+
+					&[class*="-#{$bpName}-right"] {
+						text-align: right;
+					}
+
+					&[class*="-#{$bpName}-center"] {
+						text-align: center;
+					}
+				}
+
+			}
+
+		}
+
+	}
+
+	//=============================================================================================
+	// - THE FLOATS
+
+	[class*="float-"] {
+
+		@each $bpName, $bpValue, $bp in $breakpoints {
+
+			@if $bpName == 'xs' {
+
+				&[class*="-#{$bpName}-left"] {
+					float: left;
+				}
+
+				&[class*="-#{$bpName}-right"] {
+					float: right;
+				}
+
+				&[class*="-#{$bpName}-none"] {
+					float: none;
+				}
+
+			} @else {
+
+				@include media($bpValue) {
+					&[class*="-#{$bpName}-left"] {
+						float: left;
+					}
+
+					&[class*="-#{$bpName}-right"] {
+						float: right;
+					}
+
+					&[class*="-#{$bpName}-none"] {
+						float: none;
+					}
+				}
+
+			}
+
+		}
+
+	}
+
+	//=============================================================================================
+	// - THE SECTIONS
+
+	.section,
+	[class*="section-"] {
+
+		float: left; display: block; width: 100%; @include pie-clearfix;
+
+		@each $sectionName, $sectionValue, $section in $sections {
+
+			&[class*=" section--#{$sectionName}"],
+			&[class*="section--#{$sectionName}"] {
+				max-width: $sectionValue;
+			}
+
+		}
+
+		&[class*="-centered"] {
+			float: none; margin-left: auto; margin-right: auto;
+		}
+
+	}
+
+	//=============================================================================================
+	// - THE BOX
+
+	.box,
+	[class*="box-"] {
+
+		position: relative;
+		float: left; display: block; width: 100%; @include pie-clearfix;
+
+		@each $bpName, $bpValue, $bp in $breakpoints {
+
+			@each $perc in $percentages {
+
+				$theWidth: $perc;
+
+				@if ($perc == 12) { $theWidth: 12.5; }
+				@if ($perc == 33) { $theWidth: (100 / 3); }
+				@if ($perc == 66) { $theWidth: (100 / 3) * 2; }
+
+				&[class*="-#{$bpName}-w#{$perc}p"] {
+
+					@if $bpName == 'xs' {
+
+						width: $theWidth * 1%;
+
+					} @else {
+
+						@include media($bpValue) {
+							width: $theWidth * 1%;
+						}
+
+					}
+
+				}
+
+				&[class*="-#{$bpName}-offr#{$perc}p"] {
+
+					@if $bpName == 'xs' {
+
+						margin-right: $theWidth * 1%;
+
+					} @else {
+
+						@include media($bpValue) {
+							margin-right: $theWidth * 1%;
+						}
+
+					}
+
+				}
+
+				&[class*="-#{$bpName}-offl#{$perc}p"] {
+
+					@if $bpName == 'xs' {
+
+						margin-left: $theWidth * 1%;
+
+					} @else {
+
+						@include media($bpValue) {
+							margin-left: $theWidth * 1%;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+		&[class*="-centered"] {
+			float: none; margin-left: auto; margin-right: auto;
+		}
+
+	}
+
+	//=============================================================================================
+	// - THE BOX SIZER
+
+	[class*="box__sizer-"] {
+
+		display: block; height: 0;  width: 100%;
+
+		@each $bpName, $bpValue, $bp in $breakpoints {
+
+			@each $theSizer, $sizer in $sizers {
+
+				@if $bpName == 'xs' {
+
+					&[class*="-#{$bpName}-#{$theSizer}"] {
+						padding-top: $sizer;
+					}
+
+				} @else {
+
+					&[class*="-#{$bpName}-#{$theSizer}"] {
+
+						@include media($bpValue) {
+							padding-top: $sizer;
+						}
+
+					}
+				}
+			}
+
+		}
+
+	}
+
+	//=============================================================================================
+	// - THE BOX RESET
+
+	.box--reset {
+		position: absolute !important; top: 0; left: 0; z-index: 1;
+		display: block; width: 100%; height: 100%;
+	}
+
+
+	//=============================================================================================
+	// - THE BOX INNER
+
+	.box__inner {
+		position: relative; z-index: 1;
+		width: 100%; height: 100%; overflow: hidden;
+	}
+
+	//=============================================================================================
+	// - THE GAP
+
+	[class*="gap-"] {
+
+		@each $bpName, $bpValue, $bp in $breakpoints {
+
+			@each $gapName, $gapValue, $gap in $gaps {
+
+				@if $bpName == 'xs' {
+
+					&[class*="-#{$bpName}-#{$gapName}"] {
+						padding-left: $gapValue; padding-right: $gapValue;
+					}
+
+					&[class*="-#{$bpName}-l-#{$gapName}"] {
+						padding-left: $gapValue;
+					}
+					&[class*="-#{$bpName}-r-#{$gapName}"] {
+						padding-right: $gapValue;
+					}
+
+				} @else {
+
+					&[class*="-#{$bpName}-#{$gapName}"] {
+						// - small up
+						@include media($bpValue) {
+							padding-left: $gapValue; padding-right: $gapValue;
+						}
+					}
+					&[class*="-#{$bpName}-l-#{$gapName}"] {
+						// - small up
+						@include media($bpValue) {
+							padding-left: $gapValue;
+						}
+					}
+					&[class*="-#{$bpName}-r-#{$gapName}"] {
+						// - small up
+						@include media($bpValue) {
+							padding-right: $gapValue;
+						}
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	//=============================================================================================
+	// - THE GUTTER
+
+	[class*="gutter-"] {
+
+
+		@each $bpName, $bpValue, $bp in $breakpoints {
+
+			@each $gapName, $gapValue, $gap in $gaps {
+
+				@if $bpName == 'xs' {
+
+					&[class*="-#{$bpName}-#{$gapName}"] {
+						margin: -($gapValue / 2); @include clearfix;
+
+						.box__gutter {
+							height: 100%; padding: $gapValue / 2;
+						}
+					}
+
+				} @else {
+
+					&[class*="-#{$bpName}-#{$gapName}"] {
+
+						// - small up
+						@include media($bpValue) {
+							margin: -($gapValue / 2); @include clearfix;
+
+							.box__gutter {
+								height: 100%; padding: $gapValue / 2;
+							}
+						}
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	//=============================================================================================
+	// - THE LAYOUT
+
+	[class*="layout-"] {
+
+		@include pie-clearfix;
+		display: block;
+
+		@each $bpName, $bpValue, $bp in $breakpoints {
+
+			@each $gapName, $gapValue, $gap in $gaps {
+
+				@if $bpName == 'xs' {
+
+					// - margins
+					&[class*="-#{$bpName}-mt-#{$gapName}"] { margin-top: $gapValue; 	}
+					&[class*="-#{$bpName}-mb-#{$gapName}"] { margin-bottom: $gapValue; 	}
+					&[class*="-#{$bpName}-ml-#{$gapName}"] { margin-left: $gapValue; 	}
+					&[class*="-#{$bpName}-mr-#{$gapName}"] { margin-right: $gapValue; 	}
+
+					&[class*="-#{$bpName}-mh-#{$gapName}"] { margin-left: $gapValue; margin-right: $gapValue; }
+					&[class*="-#{$bpName}-mv-#{$gapName}"] { margin-top: $gapValue; margin-bottom: $gapValue; }
+
+					// - paddings
+					&[class*="-#{$bpName}-pt-#{$gapName}"] { padding-top: $gapValue; 	}
+					&[class*="-#{$bpName}-pb-#{$gapName}"] { padding-bottom: $gapValue; }
+					&[class*="-#{$bpName}-pl-#{$gapName}"] { padding-left: $gapValue; 	}
+					&[class*="-#{$bpName}-pr-#{$gapName}"] { padding-right: $gapValue; 	}
+
+					&[class*="-#{$bpName}-ph-#{$gapName}"] { padding-left: $gapValue; padding-right: $gapValue; }
+					&[class*="-#{$bpName}-pv-#{$gapName}"] { padding-top: $gapValue; padding-bottom: $gapValue; }
+
+					&[class*="-#{$bpName}-p-#{$gapName}"] 	{ padding: $gapValue; }
+
+				} @else {
+
+					// - margins
+					&[class*="-#{$bpName}-mt-#{$gapName}"] { @include media($bpValue) { margin-top: $gapValue; 		} }
+					&[class*="-#{$bpName}-mb-#{$gapName}"] { @include media($bpValue) { margin-bottom: $gapValue; 	} }
+					&[class*="-#{$bpName}-ml-#{$gapName}"] { @include media($bpValue) { margin-left: $gapValue; 	} }
+					&[class*="-#{$bpName}-mr-#{$gapName}"] { @include media($bpValue) { margin-right: $gapValue; 	} }
+
+					&[class*="-#{$bpName}-mh-#{$gapName}"] { @include media($bpValue) { margin-left: $gapValue; margin-right: $gapValue; } }
+					&[class*="-#{$bpName}-mv-#{$gapName}"] { @include media($bpValue) { margin-top: $gapValue; margin-bottom: $gapValue; } }
+
+					// - paddings
+					&[class*="-#{$bpName}-pt-#{$gapName}"] { @include media($bpValue) { padding-top: $gapValue; 	} }
+					&[class*="-#{$bpName}-pb-#{$gapName}"] { @include media($bpValue) { padding-bottom: $gapValue; 	} }
+					&[class*="-#{$bpName}-pl-#{$gapName}"] { @include media($bpValue) { padding-left: $gapValue; 	} }
+					&[class*="-#{$bpName}-pr-#{$gapName}"] { @include media($bpValue) { padding-right: $gapValue; 	} }
+
+					&[class*="-#{$bpName}-ph-#{$gapName}"] { @include media($bpValue) { padding-left: $gapValue; padding-right: $gapValue; } }
+					&[class*="-#{$bpName}-pv-#{$gapName}"] { @include media($bpValue) { padding-top: $gapValue; padding-bottom: $gapValue; } }
+
+					&[class*="-#{$bpName}-p-#{$gapName}"] 	{  @include media($bpValue) { padding: $gapValue; } }
+				}
+
+			}
+
+		}
+
+	}

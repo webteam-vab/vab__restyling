@@ -1,0 +1,73 @@
+// - NEWSFLASH
+
+	//=============================================================================================
+	// - THE STYLES
+
+	.newsFlash {}
+
+	.newsFlash__header {
+		display: inline-block; height: 3rem; float: left;
+		border: 0.3rem solid color(neutrals-0); border-bottom: none;
+		font-family: font(special-1); font-size: 1.6rem; color: color(brand-dark);
+	}
+
+	.newsFlash__title {
+		line-height: 3rem;
+		display: block; padding: 0 gap(small); float: left;
+	}
+
+	.newsFlash__menu {
+		display: block; float: left;
+	}
+
+	.newsFlash__menu__list {
+
+		& > li {
+			display: block; width: 3rem; height: 100%; float: left;
+			border-left: .3rem solid color(neutrals-0);
+			line-height: 3rem; color: color(neutrals-1); text-align: center; cursor: pointer;
+
+			&[class*="_tabs_active"] {
+				color: color(brand-dark);
+			}
+		}
+	}
+
+	.newsFlash__inner {
+		padding: gap(small); clear: both;
+		border: .3rem solid color(neutrals-0);
+		position: relative;
+
+		& > p {
+			max-width: 100%;
+		}
+	}
+
+	.newsFlash__link {
+		display: block;
+		text-decoration: none;
+
+		.newsFlash__dir {
+			border-color: color(neutrals-0);
+			color: color(neutrals-0);
+			bottom: -.3rem;
+			position: absolute;
+			right: -.3rem;
+		}
+
+		&:hover {
+			.newsFlash__dir {
+				//background-color: color(theme-4);
+				border-color: color(theme-4);
+				color: color(theme-4);
+			}
+		}
+	}
+
+	.newsFlash__item {
+		display: none;
+
+		&[class*="_tabs_active"] {
+			display: block;
+		}
+	}

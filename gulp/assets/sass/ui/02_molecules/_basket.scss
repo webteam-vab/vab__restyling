@@ -1,0 +1,34 @@
+// - THE BASKET
+
+	//=============================================================================================
+	// - THE STYLING
+
+	.basket {
+		position: relative; z-index: 1;
+		height: 100%;
+	}
+
+	.basket__link {
+		position: relative; top: .5rem; left: 0;
+		color: color(light);
+
+		// - medium up
+		@include media(m) {
+			top: 1.5rem;
+			color: color(brand-dark);
+		}
+	}
+
+	.basket__icon {
+		position: relative;
+		padding: 0 1rem;
+		font-size: 2rem;
+	}
+
+	.basket__counter {
+		position: absolute; top: -1rem; right: 0;
+		display: block; width: 1.5rem; height: 1.5rem;
+		background-color: color(action);
+		border-radius: 50%;
+		color: color(brand-dark); font-size: 1rem; line-height: 1.7; text-align: center; font-weight: 900;
+	}

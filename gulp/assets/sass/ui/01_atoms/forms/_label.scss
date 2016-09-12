@@ -1,0 +1,13 @@
+// - FORM LABELS
+
+	.input__label {
+		display: block; width: 100%; margin-bottom: .7rem;
+		font-family: font(main); color: color(brand-dark); font-size: 1.5rem; font-weight: 400; line-height: 1;
+
+		[class*="-checkbox"] &,
+		[class*="-radio"] & {
+			position: static;
+			display: inline-block; width: auto; height: $checkboxSize; margin-bottom: 0; padding: 0;
+			color: inherit; line-height: $checkboxSize;
+		}
+	}

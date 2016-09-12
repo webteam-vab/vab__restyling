@@ -1,0 +1,247 @@
+// - TEXT INPUTS
+
+	input[type="text"],
+	input[type="email"] {
+		border-radius: 0;
+	    -webkit-appearance: none;
+	    -moz-appearance: none;
+	    appearance: none;
+	}
+
+	.input,
+	[class*="input-"] {
+		position: relative; z-index: 1;
+		display: block;
+		background-color: transparent;
+
+		&[class*="-select"] {
+			border-radius: 0;
+		}
+
+		&[class*="-checkbox"],
+		&[class*="-radio"] {
+			background-color: transparent;
+			padding-left: $checkboxSize + gap(xsmall);
+		}
+	}
+
+	[class*="input__field"] {
+		transition: border-color 250ms;
+		position: relative; z-index: 3;
+		display: block; width: 100%; height: $inputFieldHeight; padding: 0 1.8rem; overflow: hidden;
+		color: color(neutrals-3); font-size: 1.4rem; line-height: 1;
+		border: $inputFieldBorder solid color(neutrals-1); border-radius: 0;
+		box-shadow: none;
+		background-color: #fff;
+
+		&:focus,
+		&[class*="-active"],
+		&:not([class*="-select"]) & {
+			border-color: color(action); outline: none;
+		}
+
+		[class*="-ok"] & {
+
+			&:focus {
+				border-color: color(positive);
+			}
+		}
+
+		&[disabled] {
+			border-color: color(neutrals-1);
+		}
+
+		&[readonly],
+		&[class*="-noLabel"] {
+			padding-top: 0;
+			color: color(neutrals-5);
+			border-color: color(neutrals-1);
+		}
+
+		[class*="-select"] & {
+			padding-top: 0;
+			background-color: transparent;
+		}
+
+		[class*="-textarea"] & {
+			max-width: 100%; min-height: 10rem; padding-top: 1.5rem; padding-bottom: 1.5rem;
+		}
+
+		[class*="-password"] & {
+			@include input-placeholder { color: color(brand-dark); font-size: 150%; }
+		}
+
+		[class*="-clear"] & {
+			background-color: transparent;
+			border: none;
+			border-bottom: $inputFieldBorderBig solid color(neutrals-1);
+            padding: 0;
+		}
+
+		.errorTarget.error & {
+			border-color: color(negative);
+		}
+
+		@include input-placeholder {
+			color: color(neutrals-1);
+		}
+	}
+
+	[class*="input__helper"] {
+		position: absolute; bottom: 0.1rem; right: $inputFieldBorder; z-index: 3;
+		display: block; width: $inputFieldHeight; height: $inputFieldHeight - ($inputFieldBorder * 2);
+		color: color(brand-dark); font-size: 2rem; line-height: $inputFieldHeight; text-align: center;
+
+		[disabled] ~ & {
+			color: color(neutrals-1);
+		}
+
+		:focus ~ &,
+		[class*="-active"] ~ & {
+			color: color(action);
+		}
+
+		[class*="-textarea"] & {
+			top: 1.8rem; bottom: auto;
+		}
+
+		[class*="-search"] & {
+			font-size: 2rem;
+
+			&:after {
+				@include icon('search');
+			}
+		}
+
+		[class*="-clear"] & {
+			color: color(neutrals-1);
+		}
+
+		[class*="-select"] & {
+			z-index: 1;
+			color: color(brand-dark); font-size: .7rem;
+			border-left: .1rem solid color(neutrals-1);
+			background-color: #fff;
+
+			&:after {
+				@include icon('chevron-down');
+			}
+		}
+
+		[class*="-ok"] &,
+		[class*="-ok"][class*="-select"] & {
+			color: color(positive); font-size: 2rem;
+
+			&:after {
+				@include icon('ok');
+			}
+		}
+
+		// - info icon
+		&[class*="-info"] {
+			cursor: pointer;
+
+			&:after {
+				@include icon('info');
+			}
+		}
+
+		// - submit button
+		&[class*="-submit"] {
+			cursor: pointer;
+
+			&[class*="-bordered"] {
+				bottom: 1rem;
+				height: 3.5rem; width: 3.5rem;
+				border: .3rem solid color(brand-dark);
+				line-height: 3rem;
+			}
+
+			&:after {
+				@include icon('chevron-right');
+			}
+		}
+
+		// - errors
+		.error & {
+			border-color: color(negative);
+		}
+
+		.error &,
+		.error:not([class*="-select"]) & {
+
+			&[class*="-info"] {
+				right: $inputFieldHeight - 1.5rem;
+			}
+
+			&:not([class*="-info"]) {
+				color: color(negative);
+
+				&:after {
+					@include icon('warning');
+				}
+			}
+		}
+
+		.error[class*="-select"] & {
+			font-size: 2rem;
+		}
+	}
+
+	// - info shizzle
+	.input__info {
+		position: absolute; bottom: 5rem; right: 0; z-index: 1;
+		display: block; width: 100%; height: 0; overflow: hidden;
+		opacity: 0;
+
+		.input__helper--info:hover + & {
+			overflow: visible;
+			opacity: 1;
+		}
+
+		.error & {
+			right: $inputFieldHeight - 1.5rem;
+		}
+	}
+
+	.input__info__inner {
+		position: absolute; bottom: 1rem; right: 0; z-index: 1;
+		display: block; width: 50%; padding: 1rem 2rem;
+		color: #fff; font-size: 1rem; line-height: 1.3;
+		background-color: color(brand-dark);
+
+		&:after {
+			position: absolute; top: 100%; right: 1.7rem; z-index: 1;
+			display: block; width: 0; height: 0;
+			content: "";
+			border-style: solid; border-width: 1.4rem .6rem 0 .6rem; border-color: color(brand-dark) transparent transparent transparent;
+		}
+	}
+
+	.input__info__title {
+		display: block; margin-bottom: .5rem;
+		font-size: 1.2rem; font-family: font(special-1); font-weight: bold;
+	}
+
+	// - search shizzle
+	.input__clear {
+		position: absolute; top: 50%; right: 1rem; z-index: 1;
+		display: none; width: 3rem; height: 3rem; margin-top: -1.5rem;
+		color: color(action); font-size: 1.5rem; line-height: 3rem;
+
+		[class*="has_value"] & {
+			display: block;
+		}
+	}
+
+	.input__clear__icon {
+		color: color(action, dark);
+	}
+
+	// - add/remove fields shizzle
+	.input__mod {
+		display: block; width: 100%;  height: $inputFieldHeight; padding: 0; overflow: hidden;
+		border: $inputFieldBorder solid color(neutrals-1); border-radius: 0;
+		color: color(brand-dark); font-size: 2rem; line-height: $inputFieldHeight; text-align: center;
+		cursor: pointer;
+	}
