@@ -1,8 +1,6 @@
 <html>
-
 <head>
     <script type="text/javascript" src="./Design/VAB/Js/jquery-1.8/jquery-1.8.3.min.js"></script>
-
     <script type="text/javascript">
         $.fn.stars = function() {
             return $(this).each(function() {
@@ -20,84 +18,109 @@
             $('span.stars').stars();
         });
     </script>
+    <link href="Design/VAB/Css/main.css" rel="stylesheet" />
     <style type="text/css">
         span.stars,
         span.stars span {
             display: block;
-            background: url(./Design/VAB/site_images/feedback_star_transparent.png) 0 -32px repeat-x;
+            background: url(http://test_direct.vab.be/Design/VAB/site_images/feedback_star_transparent.png) 0 -32px repeat-x;
             width: 160px;
             height: 32px;
+            margin:0px auto;
         }
 
         span.stars span {
             background-position: 0 0;
         }
 
-        .reviewKader{
-          padding-top: 10px;
+        .reviewKader {
+            padding-top: 10px;
         }
 
         .reviewKader h3 {
+            color: #023c5c;
+            font-size: 15px;
+            font-weight: bold;
+            font-family: "Campton-Light", 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+            padding: 5px 30px;
+            cursor: pointer;
+            text-align: center;
+            width:100%;
+            float: left;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .reviewKader h3:first-child{
+          font-family: "Campton-Semibold", 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+        }
+
+        .reviewKader p {
+            float: left;
+            width: 100%;
+            text-align: center;
+        }
+
+        a.reviewLinks {
+            width: 100%;
+            float: left;
+            text-align: center;
+            color: #023c5c;
+            font-size: 15px;
+            font-weight: bold;
+            font-family: "Campton-Semibold", 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+            padding: 0;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: -10px;
+        }
+
+        .reviewKader .star-rating {
           color: #023c5c;
-          font-size: 15px;
-          font-weight: bold;
-          font-family: 'pt_sansregular','HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
-          padding: 5px 30px;
-          cursor: pointer;
-          text-align: center;
-          float: left;
-      }
-
-      .reviewKader p {
-          float: left;
+          margin: 0px auto;
           width: 100%;
+          max-width: 100%;
           text-align: center;
-      }
+          font-size: 32px;
+          float: left;
+          font-weight: bold;
+          font-family: "Campton-Semibold", 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+        }
 
-      a.reviewLinks {
-        width: 100%;
-        float: left;
-        text-align: center;
-        color: #023c5c;
-        font-size: 15px;
-        font-weight: bold;
-        font-family: 'pt_sansregular','HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
-        padding: 0;
-        cursor: pointer;
-        text-decoration: none;
-        margin-top: -10px;
-    }
-
-    .reviewKader .star-rating{
-      color: #023c5c;
-      font-size: 32px;
-      font-weight: bold;
-      font-family: 'pt_sansregular','HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
-    }
-
-    p.hasStars {
-        margin-left: 60px;
-        margin-bottom: 20px;
-        float: left;
-        width: auto;
-        text-align: center;
-    }
+        p.hasStars {
+          float: left;
+          margin: 0px;
+          padding: 0;
+          width: 100%;
+          max-width: 100%;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          text-align: center;
+        }
     </style>
 </head>
 
 <body>
-    <div class="grid_5">
+  <section class="vab__section--large-centered vab__gap--xs-xsmall-s-small vab__layout--xs-mt-medium-s-mt-large">
+    <div itemscope="" itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="VAB">
         <aside class="sidepanel" role="servicepanel">
             <div>
-                <div class="reviewKader">
-                  <h3>Onze klanten beoordelen onze service met</h3>
-                  <p class="hasStars"><span class="stars">4.7</span></p>
-                  <p class="star-rating">4.7 / 5</p>
-                  <h3>Gebaseerd op 215 beoordelingen</h3>
-                  <a href="https://www.vab.be/nl/overvab/beoordelingen" class="reviewLinks">Lees alle beoordelingen »</a>
+                <div itemscope="" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" class="reviewKader">
+                    <h3>Onze klanten beoordelen onze service met</h3>
+                    <p class="hasStars"><span class="stars"><span style="width: 140.8px;"></span></span>
+                    </p>
+                    <p class="star-rating">4.4 / 5</p>
+                    <meta itemprop="ratingValue" content="8.8">
+                    <meta itemprop="bestRating" content="10">
+                    <meta itemprop="worstRating" content="1">
+                    <h3>Gebaseerd op <span itemprop="reviewCount">243</span> beoordelingen</h3>
+                    <a href="/nl/overvab/beoordelingen" class="reviewLinks">Lees alle beoordelingen »</a>
                 </div>
             </div>
         </aside>
     </div>
+  </section>
 </body>
+
 </html>
