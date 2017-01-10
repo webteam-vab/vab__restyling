@@ -258,9 +258,9 @@
 
 	.mainNav__sub__main__item {
 		display: block;
-
-		&:first-child {
-			font-family: font(special-1);
+        // Bold class ipv first-child
+        &.bold {
+			font-family: font(special-1) !important;
 		}
 	}
 
@@ -268,8 +268,8 @@
 		display: block; padding: 0 gap(small);
 		font-size: 1.4rem; line-height: 1.5; color: color(neutrals-3); text-decoration: none;
 
-		.mainNav__sub__main__item:first-child & {
-			color: color(brand-dark);
+		.mainNav__sub__main__item.bold & {
+			color: color(brand-dark) !important;
 		}
 
 		[class*="no-touchevents"] [class*="_subMenu_is_open"] & {
@@ -309,7 +309,7 @@
 	.mainNav__sub__aside__link {
 		display: block; padding: 0 gap(small);
 		font-size: 1.4rem; line-height: 1.5; color: color(neutrals-3); text-decoration: none;
-		color: color(brand-dark);
+		color: color(brand-dark) !important;
 
 		[class*="no-touchevents"] [class*="_subMenu_is_open"] & {
 			padding: gap(xxsmall) gap(xsmall);

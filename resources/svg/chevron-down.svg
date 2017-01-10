@@ -1,1 +1,9 @@
-<svg width="476" height="300" viewBox="0 0 476 300" xmlns="http://www.w3.org/2000/svg"><path d="M423.111 0L476 53.455 238 294 0 53.455 52.889 0 238 187.09z" fill-rule="evenodd"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="476px" height="300px" viewBox="0 0 476 300" version="1.1" xmlns="http://www.w3.org/2000/svg" >
+    
+    <g id="icons" stroke="none" stroke-width="1"  fill-rule="evenodd">
+        <g id="chevron-down" >
+            <polygon id="arrow-copy-2" transform="translate(238.000000, 147.000000) rotate(90.000000) translate(-238.000000, -147.000000) " points="91 -38.1111131 144.454544 -91 385 147 144.454544 385 91 332.111113 278.090912 147"></polygon>
+        </g>
+    </g>
+</svg>
